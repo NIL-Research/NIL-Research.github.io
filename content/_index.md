@@ -23,29 +23,42 @@ sections:
       title: Research Community
       subtitle: Learn more about our academic environment and partners
       text: |
-        <div style="display:flex; gap:20px; flex-wrap:wrap;">
-          <a href="/conference/introductions/introducing-sisu" style="text-decoration:none; color:black; width:30%;">
-            <div style="border:1px solid #ccc; padding:10px; text-align:center;">
-              <img src="/images/SISU-logo.png" style="max-width:100%;height:150px; object-fit:contain;display:block; margin:0 auto;">
-              <h3>SISU</h3>
-              <p>Our University</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
+          
+          <a href="/conference/introductions/introducing-sisu" style="text-decoration:none; color:black; width:100%; max-width:600px;">
+            <div style="border:1px solid #ccc; padding:10px; display:flex; align-items:flex-start; gap:15px;">
+              <img src="/images/SISU-logo.png" style="width:120px; height:120px; object-fit:contain; flex-shrink:0;">
+              <div style="display:flex; flex-direction:column; justify-content:flex-start;">
+                <h3 style="margin:0;">SISU</h3>
+                <p style="margin:5px 0 0 0;">Our University</p>
+              </div>
             </div>
           </a>
-          <a href="/conference/introductions/introducing-nil" style="text-decoration:none; color:black; width:30%;">
-            <div style="border:1px solid #ccc; padding:10px; text-align:center;">
-              <img src="/images/NIL-logo.png" style="max-width:100%;height:150px; object-fit:contain;display:block; margin:0 auto;">
-              <h3>NIL</h3>
-              <p>Neurocognitive Image Lab</p>
+
+          <a href="/conference/introductions/introducing-nil" style="text-decoration:none; color:black; width:100%; max-width:600px;">
+            <div style="border:1px solid #ccc; padding:10px; display:flex; align-items:flex-start; gap:15px;">
+              <img src="/images/NIL-logo.png" style="width:120px; height:120px; object-fit:contain; flex-shrink:0;">
+              <div style="display:flex; flex-direction:column; justify-content:flex-start;">
+                <h3 style="margin:0;">NIL</h3>
+                <p style="margin:5px 0 0 0;">Neurocognitive Image Lab</p>
+              </div>
             </div>
           </a>
-          <a href="/conference/introductions/introducing-wai" style="text-decoration:none; color:black; width:30%;">
-            <div style="border:1px solid #ccc; padding:10px; text-align:center;">
-              <img src="/images/WAI-logo.jpg" style="max-width:100%;height:150px; object-fit:contain;display:block; margin:0 auto;">
-              <h3>WAI</h3>
-              <p>World Arthistory Institute</p>
+
+          <a href="/conference/introductions/introducing-wai" style="text-decoration:none; color:black; width:100%; max-width:600px;">
+            <div style="border:1px solid #ccc; padding:10px; display:flex; align-items:flex-start; gap:15px;">
+              <img src="/images/WAI-logo.jpg" style="width:120px; height:120px; object-fit:contain; flex-shrink:0;">
+              <div style="display:flex; flex-direction:column; justify-content:flex-start;">
+                <h3 style="margin:0;">WAI</h3>
+                <p style="margin:5px 0 0 0;">World Arthistory Institute</p>
+              </div>
             </div>
           </a>
+
         </div>
+
+
+
     #   count: 0 # all in folders
     #   filters:
     #     folders:
