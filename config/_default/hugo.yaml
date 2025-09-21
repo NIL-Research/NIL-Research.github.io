@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: NIL # Website name
+title: NIL 零点实验室 # Website name
 baseURL: 'https://nil-research.github.io/' # Website URL
 
 ############################
