@@ -18,24 +18,43 @@ sections:
         
         The **Neurocognitive Image Lab** is an interdisciplinary research hub at the forefront of brain science, neuroaesthetics, and visual cognition. Bridging disciplines across time and space, the lab explores how the brain encodes perception, aesthetics, and temporal experience, advancing innovative theories and applications in neuroscience, art, and intelligent interaction.
   
-  - block: collection
+  - block: markdown
     content:
-      title: Latest Events
-      subtitle:
-      text:
-      count: 5
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: conference
-    design:
-      view: card
-      columns: '1'
+      title: Research Community
+      subtitle: Learn more about our academic environment and partners
+      text: |
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <a href="/conference/introductions/introducing-sisu" style="text-decoration:none; color:black; width:30%;">
+            <div style="border:1px solid #ccc; padding:10px; text-align:center;">
+              <img src="/images/SISU-logo.png" style="max-width:100%;height:150px; object-fit:contain;display:block; margin:0 auto;">
+              <h3>SISU</h3>
+              <p>Our University</p>
+            </div>
+          </a>
+          <a href="/conference/introductions/introducing-nil" style="text-decoration:none; color:black; width:30%;">
+            <div style="border:1px solid #ccc; padding:10px; text-align:center;">
+              <img src="/images/NIL-logo.png" style="max-width:100%;height:150px; object-fit:contain;display:block; margin:0 auto;">
+              <h3>NIL</h3>
+              <p>Neurocognitive Image Lab</p>
+            </div>
+          </a>
+          <a href="/conference/introductions/introducing-wai" style="text-decoration:none; color:black; width:30%;">
+            <div style="border:1px solid #ccc; padding:10px; text-align:center;">
+              <img src="/images/WAI-logo.jpg" style="max-width:100%;height:150px; object-fit:contain;display:block; margin:0 auto;">
+              <h3>WAI</h3>
+              <p>World Arthistory Institute</p>
+            </div>
+          </a>
+        </div>
+    #   count: 0 # all in folders
+    #   filters:
+    #     folders:
+    #       - conference/introductions
+    #   offset: 0
+    #   order: asc
+    # design:
+    #   view: card
+    #   columns: '1'
   
   # - block: markdown
   #   content:
