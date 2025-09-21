@@ -8,18 +8,19 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        Neurocognitive
+
+        Image Lab
       image:
-        filename: welcome.jpg
+        filename: brain-welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        The **Neurocognitive Image Lab** is an interdisciplinary research hub at the forefront of brain science, neuroaesthetics, and visual cognition. Bridging disciplines across time and space, the lab explores how the brain encodes perception, aesthetics, and temporal experience, advancing innovative theories and applications in neuroscience, art, and intelligent interaction.
   
   - block: collection
     content:
-      title: Latest News
+      title: Latest Events
       subtitle:
       text:
       count: 5
@@ -31,43 +32,43 @@ sections:
         tag: ''
       offset: 0
       order: desc
-      page_type: post
+      page_type: conference
     design:
       view: card
       columns: '1'
   
-  - block: markdown
-    content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: coders.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
-      spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+  # - block: markdown
+  #   content:
+  #     title:
+  #     subtitle: ''
+  #     text:
+  #   design:
+  #     columns: '1'
+  #     background:
+  #       image: 
+  #         filename: coders.jpg
+  #         filters:
+  #           brightness: 1
+  #         parallax: false
+  #         position: center
+  #         size: cover
+  #         text_color_light: true
+  #     spacing:
+  #       padding: ['20px', '0', '20px', '0']
+  #     css_class: fullscreen
 
-  - block: collection
-    content:
-      title: Latest Preprints
-      text: ""
-      count: 5
-      filters:
-        folders:
-          - publication
-        publication_type: 'article'
-    design:
-      view: citation
-      columns: '1'
+  # - block: collection
+  #   content:
+  #     title: Latest Preprints
+  #     text: ""
+  #     count: 5
+  #     filters:
+  #       folders:
+  #         - publication
+  #       publication_type: 'article'
+  #   design:
+  #     view: citation
+  #     columns: '1'
 
   - block: markdown
     content:
