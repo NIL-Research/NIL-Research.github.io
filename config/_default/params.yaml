@@ -10,6 +10,8 @@ appearance:
   theme_night:
   font: native
   font_size: L
+  mode: light
+  color: blue
 
 # SEO
 
@@ -34,12 +36,12 @@ marketing:
 header:
   navbar:
     enable: true
-    align: r
+    align: c
     show_logo: true
     show_language: false
     show_day_night: true
     show_search: true
-    highlight_active_link: false
+    highlight_active_link: true
 
 # Site footer
 
@@ -96,7 +98,7 @@ features:
       app_id: ''
       api_key: ''
       index_name: ''
-      show_logo: false
+      show_logo: true
   map:
     provider: 'mapnik'
     api_key: ''
@@ -116,3 +118,9 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+
+
+logo:
+  image: "images/logo.png"   # LOGO 图片路径，相对于 /static/
+  alt: "NIL"                 # 替代文字（无障碍/SEO）
+  text: false                # 是否同时显示文字（站点名称）

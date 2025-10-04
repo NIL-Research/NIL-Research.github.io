@@ -3,7 +3,6 @@
 title:
 date: 2022-10-24
 type: landing
-show_recent_posts: false    # 设置为 false 可隐藏最新文章摘要
 
 sections:
   - block: markdown
@@ -69,78 +68,12 @@ sections:
           size: cover
         color: '#333'
 
-# sections:
-  # - block: slider
-  #   content:
-  #     slides:
-  #     - title: NIL
-  #       content: 'NIL aims to set up an international and interdisciplinary lab, exploring the anthropological universals and cultural specifics of Image perception, neuroaesthetics, dynamic information processing, temporal and spatial processes to unlock the mysteries of how we experience the world .....  '
-  #       align: center
-  #       background:
-  #         image:
-  #           filename: brain-welcome.jpg
-  #           filters:
-  #             brightness: 0.5
-  #         position: center
-  #         color: '#333'
-  #   design:
-  #     # Slide height is automatic unless you force a specific height (e.g. '400px')
-  #     slide_height: ''
-  #     is_fullscreen: true
-  #     # Automatically transition through slides?
-  #     loop: True
-  #     # Duration of transition between slides (in ms)
-  #     interval: 1500
-      
-    #   count: 0 # all in folders
-    #   filters:
-    #     folders:
-    #       - conference/introductions
-    #   offset: 0
-    #   order: asc
-    # design:
-    #   view: card
-    #   columns: '1'
-  
-  # - block: markdown
-  #   content:
-  #     title:
-  #     subtitle: ''
-  #     text:
-  #   design:
-  #     columns: '1'
-  #     background:
-  #       image: 
-  #         filename: coders.jpg
-  #         filters:
-  #           brightness: 1
-  #         parallax: false
-  #         position: center
-  #         size: cover
-  #         text_color_light: true
-  #     spacing:
-  #       padding: ['20px', '0', '20px', '0']
-  #     css_class: fullscreen
-
-  # - block: collection
-  #   content:
-  #     title: Latest Preprints
-  #     text: ""
-  #     count: 5
-  #     filters:
-  #       folders:
-  #         - publication
-  #       publication_type: 'article'
-  #   design:
-  #     view: citation
-  #     columns: '1'
-
   - block: markdown
     content:
       title:
       subtitle:
       text: |
-        {{% cta cta_link="people" cta_text="Meet the team →" %}}
+        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
     design:
       columns: '1'
 ---

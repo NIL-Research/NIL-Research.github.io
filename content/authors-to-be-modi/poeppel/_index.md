@@ -18,7 +18,7 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include ...
+bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
 # interests:
 #   - Artificial Intelligence
@@ -69,8 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Founding Members
-  - Directors
+  - Researchers
 ---
 
 Professor Ernst Pöppel is a world-renowned psychologist and neuroscientist. He has been elected as a member of multiple prestigious academies, including the German National Academy of Sciences (since 1993), the European Academy of Sciences and Arts (since 1997), the Academia Europaea (since 2015), and the Russian Academy of Education (since 2016). His research focuses primarily on the field of cognitive neuroscience, spanning psychology, neuropsychology, and sensory physiology, with particular emphasis on visual perception, temporal processing (including circadian rhythms), and neuroaesthetics.

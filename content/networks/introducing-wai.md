@@ -13,5 +13,7 @@ Currently, there are several ongoing art history research projects, namely, Anci
 WAI now also develops the multidisciplinary researches with archeology,neuroscience, computer science, linguistics and museology.
 
 Address: No.31 Villa, Wenxiang Road 1550, Songjiang District, Shanghai, China.
+
 **Website:** [https://www.wai.shisu.edu.cn/](https://www.wai.shisu.edu.cn/)
+
 E-Mail: wai@shisu.edu.cn

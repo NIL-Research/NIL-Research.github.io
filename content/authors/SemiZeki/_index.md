@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Ernst Pöppel
+title: Semir Zeki
 
 # Full Name (for SEO)
-first_name: Ernst
-last_name: Pöppel
+first_name: 
+last_name: 
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position
 role: Professor
@@ -41,10 +41,10 @@ bio: My research interests include ...
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:Ernst.Poeppel@med.uni-muenchen.de'
+# social:
+#   - icon: envelope
+#     icon_pack: fas
+#     link: 'mailto:Ernst.Poeppel@med.uni-muenchen.de'
   # - icon: twitter
   #   icon_pack: fab
   #   link: https://twitter.com/GeorgeCushen
@@ -61,7 +61,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: 'Poeppel Ernst Prof.<Ernst.Poeppel@med.uni-muenchen.de>'
+# email: 'Poeppel Ernst Prof.<Ernst.Poeppel@med.uni-muenchen.de>'
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
@@ -69,12 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Founding Members
-  - Directors
+  - Visitors
 ---
 
-Professor Ernst Pöppel is a world-renowned psychologist and neuroscientist. He has been elected as a member of multiple prestigious academies, including the German National Academy of Sciences (since 1993), the European Academy of Sciences and Arts (since 1997), the Academia Europaea (since 2015), and the Russian Academy of Education (since 2016). His research focuses primarily on the field of cognitive neuroscience, spanning psychology, neuropsychology, and sensory physiology, with particular emphasis on visual perception, temporal processing (including circadian rhythms), and neuroaesthetics.
-
-With an interdisciplinary perspective and unique theoretical and methodological approaches, Professor Pöppel’s extensive research achievements fully reflect his research philosophy of “vertical interdisciplinarity”—integrating techniques such as electrophysiology, behavioral studies, and neuroimaging—and “horizontal interdisciplinarity,” bridging psychology with fields like brain injury rehabilitation, anesthesiology, neuroaesthetics, and artificial intelligence.
-
-Owing to his significant contributions and influential work in psychology and neuroscience, Professor Pöppel has gained widespread recognition in the international academic community.
+Semir Zeki was Professor of Neurobiology at University College London (UCL) until 2008 and was subsequently Professor of Neuroaesthetics there until 2025. He is now Professor Emeritus at UCL. He is best known for his work on the organization of the primate visual brain which showed, in particular, that the visual brain is functionally specialized to process three different fundamental attributes of the visual scene – namely colour, form and motion – in parallel and asynchronously. His work in neuroaesthetics has revolved mainly around the brain mechanisms that are engaged during the experience of beauty. He is a Fellow of the Royal Society (London), a member of the American Philosophical Society and of the American Academy of Arts and Sciences, and a founder fellow of the Academy of Medical Sciences (London). Among his several prizes are the King Faisal Prize in Biology and the Erasmus Medal (Academia Europeae). In addition to specialized papers in scientific journals, he has published four books – A Vision of the Brain; Inner Vision: an exploration of art and the brain and Splendours and miseries of the brain. He has also co-authored two books: La Quête de l’essentiel with the late French painter Balthus and La bella e la bestia  with Ludovica Lumer.

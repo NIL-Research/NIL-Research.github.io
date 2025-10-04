@@ -1,0 +1,29 @@
+{{/* mycard block: image-left card with link */}}
+<div class="mycard-container">
+  {{ range .wcBlock.content.items }}
+  {{ if .url }}
+  <a href="{{ .url }}" class="mycard-card">
+  {{ else }}
+  <div class="mycard-card">
+  {{ end }}
+
+    {{ if .image }}
+    <div class="mycard-image">
+      <img src="{{ .image }}" alt="{{ .title | safeHTMLAttr }}">
+    </div>
+    {{ end }}
+
+    <div class="mycard-content">
+      <h3 class="mycard-title">{{ .title }}</h3>
+      {{ if .summary }}
+      <p class="mycard-summary">{{ .summary }}</p>
+      {{ end }}
+    </div>
+
+  {{ if .url }}
+  </a>
+  {{ else }}
+  </div>
+  {{ end }}
+  {{ end }}
+</div>

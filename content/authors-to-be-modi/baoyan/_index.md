@@ -1,9 +1,10 @@
 ---
 # Display name
-title: Yan BAO
+title: Bao Yan 包燕
+
 # Full name (for SEO)
 first_name: Yan
-last_name: BAO
+last_name: Bao
 
 # Username (this should match the folder name)
 authors:
@@ -70,8 +71,7 @@ email: 'baoyan@pku.edu.cn'
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Founding Members
-  - Directors
+  - Researchers
 ---
 
 北京大学心理与认知科学学院博士生导师、副教授（2000-）

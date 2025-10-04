@@ -1,0 +1,21 @@
+<div class="myblock-container">
+  <h2 class="myblock-title">{{ .wcBlock.content.title }}</h2>
+  <div class="myblock-text">
+    {{ .wcBlock.content.text | markdownify }}
+  </div>
+
+  <div class="myblock-grid">
+    {{ range .wcBlock.content.items }}
+      <!-- 关键：整个卡片变成一个链接 -->
+      <a href="{{ .url }}" class="myblock-card">
+        {{ if .icon }}
+        <div class="myblock-icon">
+          <img src="{{ .icon }}" alt="{{ .title }}">
+        </div>
+        {{ end }}
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </a>
+    {{ end }}
+  </div>
+</div>
