@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIL - Neurocognitive Image Lab</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            color: white;
+            background-color: #f0f4f7; /* Fallback background for below the fold */
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        /* --- Hero Section (Original Page) --- */
+        .hero-section {
+            background: radial-gradient(circle at 50% 10%, #ffffff 0%, #a4c4d7 35%, #4680a8 70%);
+            padding-bottom: 150px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            height: 100px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 0.8;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .logo .dot {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background-color: #f9b200;
+            border-radius: 50%;
+            top: -15px;
+            left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 45px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #005a9c;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .main-title {
+            font-size: 144px;
+            font-weight: 700;
+            color: #005a9c;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 48px;
+            color: #005a9c;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 20px;
+            color: #005a9c;
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            line-height: 1.6;
+        }
+
+        /* --- Remark Section (New) --- */
+        .remark-section {
+            background-color: #ffffff;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .remark-section .content-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .remark-section .remark-title {
+            font-size: 14px;
+            color: #888888;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .remark-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #005a9c;
+            margin: 0;
+        }
+
+        /* --- Features Section (New) --- */
+        .features-section {
+            background-color: #4680a8;
+            padding: 80px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .feature-item .circle {
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+        }
+        
+        .feature-item .line {
+            height: 8px;
+            width: 60px;
+            background-color: #ffffff;
+            margin: 0 auto 8px auto;
+            border-radius: 4px;
+        }
+        
+        /* --- Footer Section (New) --- */
+        .footer-section {
+            background-color: #ffffff;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Original Page Content -->
+    <section class="hero-section">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <div class="dot"></div>
+                    N<br>I<br>L
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Introduction</a></li>
+                        <li><a href="#">Conference</a></li>
+                        <li><a href="#">Network</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="hero-content">
+                <h1 class="main-title">NIL</h1>
+                <p class="subtitle">Neurocognitive Image Lab</p>
+                <p class="description">
+                    NIL aims to set up an international and interdisciplinary lab, exploring the
+                    anthropological universals and cultural specifics of Image perception, neuroaesthetics,
+                    dynamic information processing, temporal and spatial processes to unlock the
+                    mysteries of how we experience the world ......
+                </p>
+            </main>
+        </div>
+    </section>
+
+    <!-- New Remark Section -->
+    <section class="remark-section">
+        <div class="content-wrapper">
+            <div class="remark-title">Remark</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse c
+            </p>
+        </div>
+    </section>
+
+    <!-- New Features Section -->
+    <section class="features-section">
+        <div class="feature-item">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="feature-item">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="feature-item">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="feature-item">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </section>
+    
+    <!-- New Footer Section -->
+    <footer class="footer-section">
+        
+    </footer>
+
+</body>
+</html>
