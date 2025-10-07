@@ -1,17 +1,16 @@
 ---
 title: "Research Networks"
 type: content
-hero_title: "Our Global Network"
-hero_text: |
-  The **Neurocognitive Image Lab (NIL)** believes that groundbreaking science emerges at the intersection of disciplines and cultures.  We maintain active collaborations with research centers across Europe and Asia, spanning **cognitive neuroscience**, **philosophy of mind**, **metrology**, **artificial intelligence**, and **science ethics**.  
 
-  These partnerships enable us to:
-  - Conduct cross-cultural studies on perception and aesthetics  
-  - Develop shared methodologies for neural and behavioral measurement  
-  - Organize joint workshops, conferences, and artist-scientist residencies  
-  - Advocate for responsible innovation in neurotechnology  
+BigCards_title: "Global Network"
+BigCards_text: | 
+    The Neurocognitive Image Lab (NIL) believes that groundbreaking science emerges at the intersection of disciplines and cultures.  We maintain active collaborations with research centers across Europe and Asia, spanning **cognitive neuroscience**, **philosophy of mind**, **metrology**, **artificial intelligence**, and **science ethics**.  
 
-BigCards_title:  
+    These partnerships enable us to:
+    - Conduct cross-cultural studies on perception and aesthetics  
+    - Develop shared methodologies for neural and behavioral measurement  
+    - Organize joint workshops, conferences, and artist-scientist residencies  
+    - Advocate for responsible innovation in neurotechnology  
 BigCards:
   - name: "WAI at SISU"
     affiliation: "World Artificial Intelligence Institute, Shanghai International Studies University"
