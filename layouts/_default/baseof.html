@@ -173,6 +173,7 @@
                 border-bottom: 1px solid #f0f4f7;
             }
 
+            
             .hero-content {
                 padding-top: 50px;
             }
@@ -233,6 +234,7 @@
             }
         }
 
+
         @media (min-width: 769px) and (max-width: 1024px) {
             .container {
                 padding: 0 30px;
@@ -249,6 +251,59 @@
             .subtitle {
                 font-size: 36px;
             }
+
+            header nav ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                gap: 30px;
+            }
+
+            header nav li {
+                position: relative; /* 必须：让 submenu 相对它定位 */
+            }
+
+            /* 隐藏子菜单 */
+            .submenu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: white;
+                min-width: 200px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
+                list-style: none;
+                padding: 8px 0;
+                margin: 8px 0 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.2s ease;
+                z-index: 1000;
+            }
+
+            /* 悬停时显示 */
+            .has-submenu:hover .submenu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .submenu a {
+                display: block;
+                padding: 8px 20px;
+                color: #005a9c;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .submenu a:hover {
+                background-color: #f0f4f7;
+            }
+            
+
         }
 
         .menu-overlay {
@@ -280,14 +335,22 @@
                 </div>
 
                 <nav id="mainNav">
-                    <ul>
-                        <li><a href="{{ "/" | relURL }}">Home</a></li>
-                        <li><a href="{{ "/introduction/" | relURL }}">Introduction</a></li>
-                        <li><a href="{{ "/conference/" | relURL }}">Conference</a></li>
-                        <li><a href="{{ "/networks/" | relURL }}">Network</a></li>
-                        <li><a href="{{ "/news/" | relURL }}">News</a></li>
-                        <li><a href="{{ "/contacts/" | relURL }}">Contacts</a></li>
-                    </ul>
+                <ul>
+                    {{- range .Site.Menus.main -}}
+                    {{- if .HasChildren -}}
+                        <li class="has-submenu">
+                        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                        <ul class="submenu">
+                            {{- range .Children -}}
+                            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                            {{- end -}}
+                        </ul>
+                        </li>
+                    {{- else -}}
+                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{- end -}}
+                    {{- end -}}
+                </ul>
                 </nav>
 
                 <div class="logo-right">

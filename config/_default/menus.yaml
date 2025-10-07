@@ -5,7 +5,7 @@
 
 main:
   - name: Home
-    url: home
+    url: /
     weight: 10
   - name: Introduction
     url: introduction
@@ -13,18 +13,29 @@ main:
   - name: Conference
     url: conference
     weight: 30
+    identifier: conference
+  - name: Organizers
+    url: /conference/#organizers
+    weight: 10
+    parent: conference
+  - name: Welcome Message
+    url: /conference/#welcome
+    weight: 20
+    parent: conference
+  - name: Schedule
+    url: /conference/#schedule
+    weight: 30
+    parent: conference
+  - name: Venue
+    url: /conference/#venue
+    weight: 40
+    parent: conference
   - name: Networks
     url: networks
     weight: 40
   - name: News
     url: news
     weight: 50
-  # - name: People
-  #   url: people
-  #   weight: 60
-  # - name: Publications
-  #   url: publication
-  #   weight: 50
   - name: Contacts
     url: contacts
     weight: 60

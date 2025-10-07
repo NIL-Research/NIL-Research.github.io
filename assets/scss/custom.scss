@@ -18,6 +18,7 @@ body {
     --accent-color: #f9b200;
     --secondary-bg: #f8f9fa;
     --border-color: #f0f4f7;
+     --primary-color-transparent:#a1c2d5; /* 60%透明度 */
 }
 
 /* === Header & Navigation === */
@@ -35,7 +36,7 @@ body {
 
 .logo-left img,
 .logo-right img {
-    height: 60px;
+    height: 120px;
     width: auto;
     object-fit: contain;
 }
@@ -70,10 +71,56 @@ nav ul {
 
 nav a {
     text-decoration: none;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif; /* 微软雅黑字体 */
+    font-weight: bold; /* 加粗 */
+    font-size: 22px; /* 可自定义大小 */
+
     color: var(--primary-color);
-    font-size: 22px;
-    font-weight: 400;
     transition: color 0.3s;
+}
+
+@media (min-width: 769px) {
+  header nav li {
+    position: relative;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    // background: var(--primary-color-transparent); 
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    list-style: none;
+    padding: 8px 0;
+    margin: 8px 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+  }
+
+
+  .has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .submenu a {
+    display: block;
+    padding: 8px 20px;
+    color:var(--primary-color); 
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* hover时微亮 */
+    color: var(--accent-color);
+  }
 }
 
 nav a:hover {
@@ -93,7 +140,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100vh; /* 固定为视口高度 */
-    background: radial-gradient(circle at 50% 10%, #ffffff 0%, #a4c4d7 35%, #4680a8 70%);
+    background: radial-gradient(circle at 50% 30%, #ffffff 0%, #a4c4d7 18%, #4680a8 50%);
     z-index: -1; /* 放在内容后面 */
     pointer-events: none; /* 不阻挡点击 */
 }
@@ -105,7 +152,7 @@ nav a:hover {
 
 .hero-content {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;  
 }
 
 .hero-title {
@@ -407,6 +454,10 @@ nav a:hover {
     .participant-photo {
         margin: 0 auto;
     }
+
+    .submenu {
+    display: none !important; /* 移动端不显示子菜单 */
+  }
 }
 
 @media (max-width: 480px) {
