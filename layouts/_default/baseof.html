@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }} - Neurocognitive Image Lab</title>
+    <!-- 引入公共样式 (SCSS) -->
+    {{ $custom := resources.Get "scss/custom.scss" | css.Sass | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -27,90 +30,6 @@
             padding: 0 40px;
         }
 
-        /* --- Hero Section --- */
-        .hero-section {
-            background: radial-gradient(circle at 50% 10%, #ffffff 0%, #a4c4d7 35%, #4680a8 70%);
-            padding-bottom: 150px;
-            min-height: 100vh;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            min-height: 100px;
-        }
-
-        .logo {
-            font-size: 48px;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 0.8;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .logo .dot {
-            position: absolute;
-            width: 28px;
-            height: 28px;
-            background-color: #f9b200;
-            border-radius: 50%;
-            top: -15px;
-            left: 20px;
-        }
-
-        /* Mobile menu toggle button */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        .menu-toggle span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: #005a9c;
-            margin: 6px 0;
-            transition: 0.3s;
-        }
-
-        nav {
-            transition: all 0.3s ease;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav li {
-            margin-left: 45px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #005a9c;
-            font-size: 22px;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #f9b200;
-        }
-
-        .hero-content {
-            text-align: center;
-            padding-top: 100px;
-        }
 
         .main-title {
             font-size: clamp(80px, 12vw, 144px);
@@ -180,14 +99,14 @@
         }
 
         .feature-item .circle {
-            width: 80px;
-            height: 80px;
+            /* 使用 clamp() 实现：最小 60px，理想 15vw，最大 120px */
+            width: clamp(60px, 15vw, 120px);
+            height: clamp(60px, 15vw, 120px);
             background-color: #ffffff;
             border-radius: 50%;
             margin: 0 auto 20px auto;
             transition: transform 0.3s;
         }
-
         .feature-item:hover .circle {
             transform: scale(1.1);
         }
@@ -222,19 +141,6 @@
                 position: relative;
             }
 
-            .logo {
-                font-size: 36px;
-                padding-left: 15px;
-            }
-
-            .logo .dot {
-                width: 20px;
-                height: 20px;
-                top: -10px;
-                left: 15px;
-            }
-
-            /* Mobile Menu */
             .menu-toggle {
                 display: block;
             }
@@ -260,11 +166,6 @@
                 padding-top: 80px;
             }
 
-            nav li {
-                margin: 0;
-                padding: 0;
-            }
-
             nav a {
                 display: block;
                 padding: 15px 30px;
@@ -286,7 +187,6 @@
                 margin-top: 30px;
             }
 
-            /* Remark Section Mobile */
             .remark-section {
                 padding: 60px 20px;
             }
@@ -295,7 +195,6 @@
                 font-size: 16px;
             }
 
-            /* Features Section Mobile */
             .features-section {
                 gap: 40px;
                 padding: 60px 20px;
@@ -334,14 +233,9 @@
             }
         }
 
-        /* Tablet specific adjustments */
         @media (min-width: 769px) and (max-width: 1024px) {
             .container {
                 padding: 0 30px;
-            }
-
-            nav li {
-                margin-left: 25px;
             }
 
             nav a {
@@ -357,7 +251,6 @@
             }
         }
 
-        /* Overlay for mobile menu */
         .menu-overlay {
             display: none;
             position: fixed;
@@ -379,52 +272,51 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <header>
-                <div class="logo">
-                    <div class="dot"></div>
-                    N<br>I<br>L
+            <header class="header">
+                <div class="logo-left">
+                    <a href="{{ "/" | relURL }}">
+                        <img src="{{ "/images/nil-logo-trans.png" | relURL }}" alt="NIL Left Logo">
+                    </a>
                 </div>
-                <button class="menu-toggle" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
                 <nav id="mainNav">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about/">Introduction</a></li>
-                        <li><a href="/conference/">Conference</a></li>
-                        <li><a href="/network/">Network</a></li>
-                        <li><a href="/post/">News</a></li>
-                        <li><a href="/contact/">Contacts</a></li>
+                        <li><a href="{{ "/" | relURL }}">Home</a></li>
+                        <li><a href="{{ "/introduction/" | relURL }}">Introduction</a></li>
+                        <li><a href="{{ "/conference/" | relURL }}">Conference</a></li>
+                        <li><a href="{{ "/networks/" | relURL }}">Network</a></li>
+                        <li><a href="{{ "/news/" | relURL }}">News</a></li>
+                        <li><a href="{{ "/contacts/" | relURL }}">Contacts</a></li>
                     </ul>
                 </nav>
+
+                <div class="logo-right">
+                    <a href="{{ "/" | relURL }}">
+                        <img src="{{ "/images/SISU-logo-trans.png" | relURL }}" alt="SISU Right Logo">
+                    </a>
+                </div>
             </header>
 
             <main class="hero-content">
-                <h1 class="main-title">NIL</h1>
-                <p class="subtitle">Neurocognitive Image Lab</p>
-                <p class="description">
-                    NIL aims to set up an international and interdisciplinary lab, exploring the
-                    anthropological universals and cultural specifics of Image perception, neuroaesthetics,
-                    dynamic information processing, temporal and spatial processes to unlock the
-                    mysteries of how we experience the world ......
-                </p>
+                {{ block "main" . }}{{ end }}
             </main>
         </div>
     </section>
 
-    <!-- Remark Section -->
+    <!-- 只在首页显示 Remark Section -->
+    {{ if eq .Kind "home" }}
     <section class="remark-section">
         <div class="content-wrapper">
             <div class="remark-title">Remark</div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse c
+                {{ .Params.remarkText | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }}
             </p>
         </div>
     </section>
+    {{ end }}
 
-    <!-- Features Section -->
+    <!-- 只在首页显示 Features Section -->
+    {{ if eq .Kind "home" }}
     <section class="features-section">
         <div class="feature-item">
             <div class="circle"></div>
@@ -447,6 +339,7 @@
             <div class="line"></div>
         </div>
     </section>
+    {{ end }}
 
     <!-- Footer Section -->
     <footer class="footer-section">
@@ -465,7 +358,6 @@
             nav.classList.toggle('active');
             overlay.classList.toggle('active');
 
-            // Animate hamburger menu
             const spans = menuToggle.querySelectorAll('span');
             if (nav.classList.contains('active')) {
                 spans[0].style.transform = 'rotate(45deg) translateY(9px)';
@@ -478,7 +370,6 @@
             }
         }
 
-        // Close menu when clicking on a link (mobile)
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 const nav = document.getElementById('mainNav');
@@ -489,7 +380,6 @@
             });
         });
 
-        // Close menu on window resize if open
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 const nav = document.getElementById('mainNav');
@@ -505,5 +395,6 @@
             }
         });
     </script>
+
 </body>
 </html>

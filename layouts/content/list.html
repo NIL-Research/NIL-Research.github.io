@@ -1,0 +1,66 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  {{ $styles := resources.Get "scss/custom.scss" | toCSS }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
+<body class="content-page">
+
+  <!-- Page Hero Section -->
+  {{ with .Params.hero_title }}
+  <section class="page-hero">
+    <div class="hero-content container">
+      <h2 class="section-title hero-title">{{ . }}</h2>
+      {{ with $.Params.hero_text }}
+      <div class="hero-text">
+        {{ . | markdownify }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- miniCards -->
+  {{ if .Params.miniCards }}
+  <section class="section">
+    <h2 class="section-title">{{ .Params.miniCards_title }}</h2>
+    <div class="organizers-grid">
+      {{ range .Params.miniCards }}
+        <a href="{{ .url }}">
+          <div class="organizer-card">
+            <div class="organizer-name">{{ .title }}</div>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- BigCards -->
+  {{ if .Params.BigCards }}
+  <section class="section">
+    <h2 class="section-title">{{ .Params.BigCards_title }}</h2>
+    <div class="participants-grid">
+      {{ range .Params.BigCards }}
+      <a href="{{ .url }}">
+      <div class="participant">
+        <img src="{{ .photo }}" alt="{{ .name }}" class="participant-photo-square">
+        <div class="participant-info">
+          <h3>{{ .name }}</h3>
+          <h4>{{ .affiliation }}</h4>
+          <p>{{ .bio }}</p>
+        </div>
+      </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+</body>
+</html>
+{{ end }}
