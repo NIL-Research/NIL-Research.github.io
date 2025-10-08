@@ -13,34 +13,34 @@ BigCards_text: |
     - Advocate for responsible innovation in neurotechnology  
 BigCards:
   - name: "WAI at SISU"
-    affiliation: "World Artificial Intelligence Institute, Shanghai International Studies University"
-    bio: "Leading research on AI applications in neurocognitive studies and arts."
+    affiliation: "World Art Institute, Shanghai International Studies University"
+    bio: 
     photo: "/images/WAI-logo.jpg"
     url: "/networks/introducing-wai"
   - name: "IMP at LMU"
     affiliation: "Institute of Medical Psychology, Ludwig Maximilian University of Munich"
-    bio: "Pioneering research in consciousness and perception."
+    bio:  
     photo: "/images/Logo_LMU.png"
     url: "https://www.imp.med.uni-muenchen.de/"
   - name: "PTB Berlin"
     affiliation: "Physikalisch-Technische Bundesanstalt"
-    bio: "Germany's national metrology institute, collaborating on neural timing and precision measurement."
+    bio:  
     photo: "/images/networks/ptb.jpg"
     url: "https://www.ptb.de/"
   - name: "VDW"
     affiliation: "Verband Deutscher Wissenschaftler"
-    bio: "Promoting ethical science and interdisciplinary dialogue on technology and society."
+    bio: 
     photo: "/images/networks/vdw.jpg"
     url: "https://www.vdw.de/"
   - name: "Para Limes"
     affiliation: "Para Limes Research Group"
-    bio: "Exploring the boundaries of science, philosophy, and art through transdisciplinary research."
+    bio:  
     photo: "/images/networks/paralimes.jpg"
     url: "https://www.paralimes.org/"
   - name: "NeuroCine Consortium"
     affiliation: "International Research Network"
-    bio: "Studying film perception, narrative cognition, and embodied simulation in cinematic experience."
-    photo: "/images/networks/neurocine.jpg"
+    bio:  
+    photo:  
     url: "#"
 ---
 
