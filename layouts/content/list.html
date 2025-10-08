@@ -33,7 +33,7 @@
   </section>
   {{ end }}
 
-  <!-- miniCards -->
+  <!-- miniCards (增强版) -->
   {{ if .Params.miniCards }}
   <section class="section">
     <div class="section-container">
@@ -45,11 +45,23 @@
       </div>
       {{ end }}
 
-      <div class="organizers-grid">
+      <div class="mini-cards-grid">
         {{ range .Params.miniCards }}
-          <a href="{{ .url }}">
-            <div class="organizer-card">
-              <div class="organizer-name">{{ .title }}</div>
+          {{ $card := . }}
+          <a href="{{ $card.url }}" class="mini-card">
+            {{ if $card.image }}
+              <div class="mini-card-image">
+                <img src="{{ $card.image | relURL }}" alt="{{ $card.title }}">
+              </div>
+            {{ end }}
+            <div class="mini-card-content">
+              <h3 class="mini-card-title">{{ $card.title }}</h3>
+              {{ with $card.subtitle }}
+                <div class="mini-card-subtitle">{{ . }}</div>
+              {{ end }}
+              {{ with $card.summary }}
+                <div class="mini-card-summary">{{ . | markdownify }}</div>
+              {{ end }}
             </div>
           </a>
         {{ end }}
