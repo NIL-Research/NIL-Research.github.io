@@ -24,18 +24,25 @@ body {
 /* === Header & Navigation === */
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     height: 100px;
-    padding-top: 40px;
+    padding-top: 80px;
     min-height: 100px;
     width: 100%;
-    gap: 60px;
+    // gap: 60px;
 }
 
-.logo-left img,
 .logo-right img {
+    margin-right: -80px; 
+    height: 135px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-left img {
+    margin-left: -80px; 
     height: 120px;
     width: auto;
     object-fit: contain;
@@ -131,6 +138,7 @@ nav a:hover {
 .hero-section {
     position: relative;
     padding-bottom: 150px;
+    // background: radial-gradient(circle at 50% 30%, #ffffff 0%, #a4c4d7 18%, #4680a8 50%);
 }
 
 .hero-section::before {
@@ -192,6 +200,133 @@ nav a:hover {
     font-size: 16px;
 }
 
+/* === Transparent Section Base === */
+.section-transparent {
+  padding: 60px 0;
+  color: #005a9c;
+}
+
+.section-title-transparent {
+  text-align: center;
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #005a9c;
+}
+
+/* === Events Grid (Transparent Background Cards) === */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.event-card {
+  display: block;
+  text-decoration: none; /* 去掉下划线 */
+  color: inherit; /* 继承父级颜色 */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 90, 156, 0.15);
+  cursor: pointer; /* 显示手型光标 */
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 90, 156, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+
+.event-name {
+  font-size: 20px;
+  color: #005a9c;
+  font-weight: 800;
+  line-height: 2.4;
+  margin: 0; 
+}
+
+
+/* === miniCards === */
+.mini-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.mini-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 90, 156, 0.15);
+}
+
+.mini-card-image {
+  width: 100%;
+  height: 160px; /* 固定高度，所有卡片图片区域等高 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: #f8f9fa; 
+  overflow: hidden;
+  
+}
+
+.mini-card-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+  display: block;
+  border-radius: 8px; /* 👈 新增：容器圆角 */
+}
+
+.mini-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 8px;
+}
+
+.mini-card-subtitle {
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.mini-card-summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  flex: 1;
+}
+
 /* === Page Hero Section === */
 .page-hero {
     padding: 40px 20px;
@@ -245,11 +380,12 @@ nav a:hover {
     padding: 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0);
 }
 
-.section:nth-child(even) {
-    background-color: var(--secondary-bg);
-}
+// .section:nth-child(even) {
+//     background-color: var(--secondary-bg);
+// }
 
 .section-title {
     font-size: clamp(32px, 4vw, 48px);
@@ -281,12 +417,23 @@ nav a:hover {
   line-height: 1.6;
 }
 
+.section-intro p {
+  margin-bottom: 1em;
+}
+
+.section-intro p:last-child {
+  margin-bottom: 0;
+}
+
 .section-container {
   background: white;      /* 整块白色背景 */
   padding: 30px;          /* 内边距让内容和边框有空隙 */
   border-radius: 10px;    /* 圆角，可选 */
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
+
+
 
 /* === Organizers Grid (通用) === */
 .organizers-grid {
@@ -349,6 +496,7 @@ nav a:hover {
     font-size: 28px;
     color: var(--primary-color);
     margin-bottom: 5px;
+    text-align: left;
 }
 
 .participant-info h4 {
@@ -356,11 +504,13 @@ nav a:hover {
     color: #666;
     font-weight: 400;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .participant-info p {
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: left;
 }
 .participant-photo-square {
     width: 150px;
@@ -481,17 +631,16 @@ nav a:hover {
 
 /* === 统一去掉卡片链接下划线，并保留 hover 效果 === */
 
-/* miniCards / organizers / myblock-card / mycard-card 的 a 标签 */
-.page-hero .hero-text a ,
 .organizers-grid a,
+.participants-grid a,
 .myblock-card,
 .mycard-card {
-    text-decoration: none; /* 去掉下划线 */
-    color: inherit;        /* 继承文字颜色 */
+    text-decoration: none !important;
+    color: inherit;
     transition: transform 0.3s, box-shadow 0.3s; /* 保留 hover 动画 */
-}
 
-/* hover 保持原有效果 */
+  }
+
 .organizers-grid a:hover,
 .myblock-card:hover,
 .mycard-card:hover {

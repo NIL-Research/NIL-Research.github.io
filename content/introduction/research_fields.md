@@ -38,34 +38,4 @@ sections:
 
     design:
       columns: 1
-
-  # # Core Research Areas (using feature block style)
-  # - block: myblock
-  #   content:
-  #     title: "Core Research Areas"
-  #     items:
-  #       - title: "🖼️ Image Perception"
-  #         description: |
-  #           How does the brain transform pixels into meaning? We study hierarchical visual processing—from edge detection to scene understanding—using naturalistic stimuli and deep neural networks as computational benchmarks.
-  #         url: "#image-perception"
-
-  #       - title: "🎨 Neuroaesthetics"
-  #         description: |
-  #           What makes an image beautiful? We explore the neural correlates of aesthetic judgment across cultures, linking art perception to emotion, memory, and reward systems.
-  #         url: "#neuroaesthetics"
-
-  #       - title: "⏳ Spatiotemporal Processing"
-  #         description: |
-  #           How do we perceive dynamic events in space and time? Our work examines neural integration windows, motion prediction, and the brain’s internal clock using psychophysics and time-resolved neuroimaging.
-  #         url: "#spatiotemporal"
-
-  #       - title: "🔗 Interdisciplinary Frontiers"
-  #         description: |
-  #           We collaborate with computer scientists, artists, and clinicians to apply our findings to AI vision, mental health diagnostics, and human-centered design.
-  #         url: "#interdisciplinary"
-  #   design:
-  #     columns: 1
-  #     style: "centered"
-
-  # Detailed Descriptions (optional: use another myblock for long text)
 ---

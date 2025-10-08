@@ -1,0 +1,159 @@
+<!-- layouts/_default/single.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    
+    <!-- 引入公共 SCSS (Hugo v0.128+ 语法) -->
+    {{ $custom := resources.Get "scss/custom.scss" | css.Sass | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="logo-left">
+            <a href="{{ "/" | relURL }}">
+                <img src="{{ "/images/nil-logo-trans.png" | relURL }}" alt="NIL Left Logo">
+            </a>
+        </div>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="{{ "/" | relURL }}">Home</a></li>
+                <li><a href="{{ "/introduction/" | relURL }}">Introduction</a></li>
+                <li><a href="{{ "/conference/" | relURL }}">Conference</a></li>
+                <li><a href="{{ "/networks/" | relURL }}">Network</a></li>
+                <li><a href="{{ "/news/" | relURL }}">News</a></li>
+                <li><a href="{{ "/contacts/" | relURL }}">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo-right">
+            <a href="{{ "/" | relURL }}">
+                <img src="{{ "/images/SISU-logo-trans.png" | relURL }}" alt="SISU Right Logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">{{ .Params.heroTitle | default .Title }}</h1>
+            {{ with .Params.heroSubtitle }}
+            <h2 class="hero-subtitle">{{ . }}</h2>
+            {{ end }}
+            {{ with .Params.heroDetails }}
+            <div class="hero-details">
+                {{ range . }}
+                <p>{{ . | markdownify }}</p>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ with .Params.institutions }}
+            <ul class="institutions">
+                {{ range . }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Organizers -->
+    {{ with .Params.organizers }}
+    <section class="section">
+        <h2 class="section-title">Conference Organizers</h2>
+        <div class="organizers-grid">
+            {{ range . }}
+            <div class="organizer-card">
+                {{ if .role }}
+                <div class="organizer-name"><strong>{{ .role }}</strong></div>
+                <div style="height: 20px;"></div>
+                {{ end }}
+                <div class="organizer-name">{{ .name }}</div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Welcome Message -->
+    <section class="section">
+        <h2 class="section-title">Welcome Message</h2>
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            {{ .Content }}
+        </div>
+    </section>
+
+    <!-- Key Speakers -->
+    {{ with .Params.speakers }}
+    <section class="section">
+        <h2 class="section-title">Keynote Speakers</h2>
+        <div class="participants-grid">
+            {{ range . }}
+            <div class="participant">
+                <img src="{{ .photo | default "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23a4c4d7'/%3E%3C/svg%3E" }}" alt="{{ .name }}" class="participant-photo">
+                <div class="participant-info">
+                    <h3>{{ .name }}</h3>
+                    <h4>{{ .affiliation }}</h4>
+                    <p>{{ .bio }}</p>
+                    <p class="abstract-title">{{ .abstractTitle }}</p>
+                    <p>{{ .abstract }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; {{ now.Year }} NIL - Neurocognitive Image Lab. All rights reserved.</p>
+        <p>{{ .Params.footerText | default .Title }}</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+
+            const toggle = document.querySelector('.menu-toggle');
+            const spans = toggle.querySelectorAll('span');
+
+            if (nav.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('mainNav');
+                if (nav.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Close menu on window resize if open
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                const nav = document.getElementById('mainNav');
+                nav.classList.remove('active');
+                const spans = document.querySelector('.menu-toggle').querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

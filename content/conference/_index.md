@@ -3,8 +3,8 @@ title: "NIL Conference 2025"
 type: "conference"
 
 # === Hero Section ===
-hero_title: "Conference 2025"
-hero_subtitle: "Exploring Aesthetics, Cognition, and Neuroscience"
+hero_title: "Image Neuroscience and the Arts"
+hero_subtitle: "NIL 2025 Interdisciplinary Exchange "
 hero_date: "October 19–25, 2025"
 hero_location: "Shanghai International Studies University, Shanghai, China"
 

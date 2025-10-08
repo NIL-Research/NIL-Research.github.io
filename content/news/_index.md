@@ -1,11 +1,14 @@
 ---
-title: Latest News
+title: "News"
+type: content
 
-# Listing view
-view: compact
+BigCards_title: "News"
+BigCards_text: | 
 
-# Optional banner image (relative to `assets/media/` folder).
-banner:
-  caption: ''
-  image: ''
+BigCards:
+  - name: "Autumn 2025"
+    affiliation: "World Artificial Intelligence Institute, Shanghai International Studies University"
+    bio: "Leading research on AI applications in neurocognitive studies and arts."
+    photo: "/images/WAI-logo.jpg"
+    url: "/news/Autumn2025/"
 ---

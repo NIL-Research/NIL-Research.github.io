@@ -366,19 +366,46 @@
         </div>
     </section>
 
-    <!-- 只在首页显示 Remark Section -->
-    {{ if eq .Kind "home" }}
-    <section class="remark-section">
-        <div class="content-wrapper">
-            <div class="remark-title">Remark</div>
-            <p>
-                {{ .Params.remarkText | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }}
-            </p>
+    <!-- Current_Events -->
+    {{ if .Params.current_Events }}
+    <section id="current_Events" class="section-transparent">
+    <div class="container">
+        <!-- <h2 class="section-title-transparent">Current Events</h2> -->
+        <div class="event-grid">
+        {{ range .Params.current_Events }}
+            <a href="{{ .url | relURL }}" class="event-card" target="{{ if hasPrefix .url "http" }}_blank{{ else }}_self{{ end }}" rel="noopener">
+            <div class="partner-name">{{ .name }}</div>
+            </a>
+        {{ end }}
+        </div>
+    </div>
+    </section>
+    {{ end }}
+
+    <!-- mainCards -->
+    {{ if or .Params.mainCards_title .Params.mainCards_text .Params.mainCards_images }}
+    <section class="section">
+        <div class="section-container">
+        <h2 class="section-title">{{ .Params.mainCards_title }}</h2>
+
+        {{ with .Params.mainCards_text }}
+        <div class="section-intro">
+            {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.mainCards_images }}
+        <div class="maincards-images">
+            {{ range . }}
+            <img src="{{ . }}" alt="" class="maincards-image">
+            {{ end }}
+        </div>
+        {{ end }}
         </div>
     </section>
     {{ end }}
 
-    <!-- 只在首页显示 Features Section -->
+    <!-- 只在首页显示 Features Section
     {{ if eq .Kind "home" }}
     <section class="features-section">
         <div class="feature-item">
@@ -402,7 +429,7 @@
             <div class="line"></div>
         </div>
     </section>
-    {{ end }}
+    {{ end }} -->
 
     <!-- Footer Section -->
     <footer class="footer-section">
