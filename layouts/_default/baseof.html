@@ -382,19 +382,19 @@
     </section>
     {{ end }}
 
-    <!-- mainCards -->
-    {{ if or .Params.mainCards_title .Params.mainCards_text .Params.mainCards_images }}
+    <!-- mark mainCards -->
+    {{ if or .Params.markCards_title .Params.markCards_text .Params.markCards_images }}
     <section class="section">
         <div class="section-container">
-        <h2 class="section-title">{{ .Params.mainCards_title }}</h2>
+        <h2 class="section-title">{{ .Params.markCards_title }}</h2>
 
-        {{ with .Params.mainCards_text }}
+        {{ with .Params.markCards_text }}
         <div class="section-intro">
             {{ . | markdownify }}
         </div>
         {{ end }}
 
-        {{ with .Params.mainCards_images }}
+        {{ with .Params.markCards_images }}
         <div class="maincards-images">
             {{ range . }}
             <img src="{{ . }}" alt="" class="maincards-image">

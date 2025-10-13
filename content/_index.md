@@ -7,8 +7,10 @@ current_Events:
           url: "/conference/"
         - name: Autumn School 2025
           url: "/news/autumn2025/"
-mainCards_title: Remark
-mainCards_text: |
+        - name: Join Us
+          url: "/people/recruitment"
+markCards_title: Remark
+markCards_text: |
         At the Neurocognitive Image Lab (NIL), our mission is to bridge neuroscience, 
         psychology, philosophy, and the arts. We aim to explore the neural foundations of image 
         perception, neuroaesthetics, and the temporal and spatial dynamics of cognition.

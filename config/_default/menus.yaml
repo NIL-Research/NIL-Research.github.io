@@ -4,32 +4,53 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
-    url: /
+  - name: About
+    url: /introduction/
     weight: 10
-  - name: Introduction
-    url: introduction
+  - name: Research
+    url: /introduction/#research
+    weight: 1
+    parent: About
+  - name: Equipment
+    url: /introduction/#equipment
+    weight: 2
+    parent: About
+
+
+  - name: People
+    url: /people/
     weight: 20
+  - name: Our Team
+    url: /people/
+    weight: 1
+    parent: People
+  - name: Join Us
+    url: /people/recruitment
+    weight: 2
+    parent: People
+
+
   - name: Conference
-    url: conference
+    url: /conference/
     weight: 30
-    identifier: conference
+    identifier: Conference
   - name: Organizers
     url: /conference/#organizers
-    weight: 10
-    parent: conference
+    weight: 1
+    parent: Conference
   - name: Welcome Message
     url: /conference/#welcome
-    weight: 20
-    parent: conference
+    weight: 2
+    parent: Conference
   - name: Schedule
     url: /conference/#schedule
-    weight: 30
-    parent: conference
+    weight: 3
+    parent: Conference
   - name: Venue
     url: /conference/#venue
-    weight: 40
-    parent: conference
+    weight: 4
+    parent: Conference
+
   - name: Networks
     url: networks
     weight: 40

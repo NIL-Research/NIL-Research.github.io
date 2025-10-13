@@ -6,7 +6,7 @@ miniCards_text:
 
 miniCards:
   - title: "Yan Bao"
-    url: 
+    url: /people/yanbao
     image: "/images/photo/baoyan.jpg"
     subtitle: 
     summary: | 
@@ -15,7 +15,7 @@ miniCards:
         Professor Emerita,  PKU
 
   - title: "Nikos Logothetis"
-    url: 
+    url: /people/nikoslogothetis
     image: "/images/photo/NikosLogothetis.jpg"
     subtitle: 
     summary: | 
@@ -25,7 +25,7 @@ miniCards:
         
 
   - title: "Ernst Pöppel"
-    url: 
+    url: /people/poeppel
     image: "/images/photo/ErnstPöppel.jpg"
     subtitle: 
     summary: | 
@@ -35,7 +35,7 @@ miniCards:
         
 
   - title: "Lao Zhu"
-    url: 
+    url: /people/laozhu
     image: "/images/photo/LaoZhu.jpg"
     subtitle: 
     summary: | 

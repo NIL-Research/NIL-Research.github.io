@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="section">
+  <div class="section-container person-profile">
+    
+    <!-- 标题（姓名） -->
+    <h2 class="person-name">{{ .Title }}</h2>
+
+    <!-- 头像 + 信息 -->
+    <div class="person-header">
+      {{ with .Params.photo }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="person-photo">
+      {{ end }}
+      
+      <div class="person-info">
+        {{ with .Params.role }}<p><strong>Role:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.position }}<p><strong>Position:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.department }}
+          <p>
+            <strong>Department:</strong>
+            {{ range $index, $dept := . }}
+              {{ if $index }}, {{ end }}{{ $dept }}
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ with .Params.email }}<p><strong>Email:</strong> <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+        {{ with .Params.website }}<p><strong>Website:</strong> <a href="{{ . }}" target="_blank">{{ . }}</a></p>{{ end }}
+      </div>
+    </div>
+
+    <!-- 个人简介 -->
+    {{ with .Content }}
+      <div class="person-bio">
+        {{ . }}
+      </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}

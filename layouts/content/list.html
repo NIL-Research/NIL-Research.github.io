@@ -1,15 +1,4 @@
 {{ define "main" }}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
-  {{ $styles := resources.Get "scss/custom.scss" | toCSS }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-</head>
-<body class="content-page">
-
   <!-- mainCards -->
   {{ if or .Params.mainCards_title .Params.mainCards_text .Params.mainCards_images }}
   <section class="section">
@@ -99,7 +88,4 @@
     </div>
   </section>
   {{ end }}
-
-</body>
-</html>
 {{ end }}

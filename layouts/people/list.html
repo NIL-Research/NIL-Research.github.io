@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+{{ $people := where site.RegularPages "Section" "people" }}
+
+<section class="section people-list-section">
+  <div class="section-container">
+
+    <!-- 页面主标题（H2） -->
+    <h2 class="section-title">{{ .Params.miniCards_title | default "Our Team" }}</h2>
+
+    <!-- 页面总体介绍 -->
+    {{ with .Params.miniCards_text }}
+      <div class="section-intro">
+        {{ . | markdownify }}
+      </div>
+    {{ end }}
+
+    <!-- 按 user_group 顺序渲染分组 -->
+    {{ range .Params.user_group }}
+      {{ $groupName := .group_name }}
+      {{ $groupText := .group_text }}
+      {{ $members := where $people ".Params.user_groups" "intersect" (slice $groupName) }}
+
+      {{ if $members }}
+        <!-- 分组标题（H3） -->
+        <h3 class="people-group-title">{{ $groupName }}</h3>
+
+        <!-- 分组描述 -->
+        {{ with $groupText }}
+          <div class="people-group-intro">
+            {{ . | markdownify }}
+          </div>
+        {{ end }}
+
+        <!-- 人物卡片网格 -->
+        <div class="mini-cards-grid">
+          {{ range $members.ByTitle }}
+            {{ $card := . }}
+            <a href="{{ $card.RelPermalink }}" class="mini-card">
+              {{ if $card.Params.photo }}
+                <div class="mini-card-image">
+                  <img src="{{ $card.Params.photo | relURL }}" alt="{{ $card.Title }}">
+                </div>
+              {{ else }}
+                <div class="mini-card-image">
+                  <img src="/images/default-avatar.png" alt="{{ $card.Title }}">
+                </div>
+              {{ end }}
+              <div class="mini-card-content">
+                <h3 class="mini-card-title">{{ $card.Title }}</h3>
+                {{ with $card.Params.role }}
+                  <div class="mini-card-subtitle">{{ . }}</div>
+                {{ end }}
+                {{ with $card.Params.department }}
+                  <div class="mini-card-summary">{{ delimit . ", " | markdownify }}</div>
+                {{ end }}
+              </div>
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}

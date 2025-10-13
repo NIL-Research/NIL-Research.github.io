@@ -14,8 +14,6 @@ miniCards:
     url: "/introduction/founding_members/"
   - title: "Research Fields"
     url: "/introduction/research_fields/"
-  - title: "NIL Team"
-    url: "/introduction/team/"
 ---
 
 
