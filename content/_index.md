@@ -8,7 +8,7 @@ current_Events:
         - name: Autumn School 2025
           url: "/news/autumn2025/"
         - name: Join Us
-          url: "/people/recruitment"
+          url: "/people/open_positions"
 markCards_title: Remark
 markCards_text: |
         At the Neurocognitive Image Lab (NIL), our mission is to bridge neuroscience, 
