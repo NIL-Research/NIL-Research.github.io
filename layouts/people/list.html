@@ -33,8 +33,15 @@
         {{ end }}
 
         <!-- 人物卡片网格 -->
+        <!-- 人物卡片网格 -->
         <div class="mini-cards-grid">
-          {{ range $members.ByTitle }}
+          {{ $ordered := where $members ".Params.order" "ne" nil }}
+          {{ $unordered := where $members ".Params.order" "eq" nil }}
+          {{ $sortedOrdered := sort $ordered ".Params.order" "asc" }}
+          {{ $sortedUnordered := sort $unordered ".Title" "asc" }}
+          {{ $finalMembers := $sortedOrdered | append $sortedUnordered }}
+
+          {{ range $finalMembers }}
             {{ $card := . }}
             <a href="{{ $card.RelPermalink }}" class="mini-card">
               {{ if $card.Params.photo }}
@@ -58,6 +65,9 @@
             </a>
           {{ end }}
         </div>
+
+
+
       {{ end }}
     {{ end }}
 
