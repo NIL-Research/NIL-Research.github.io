@@ -8,7 +8,7 @@
 
       {{ with .Params.mainCards_text }}
       <div class="section-intro">
-        {{ . | markdownify }}
+        {{ . | markdownify  | safeHTML }}
       </div>
       {{ end }}
 
@@ -31,7 +31,7 @@
 
       {{ with .Params.miniCards_text }}
       <div class="section-intro">
-        {{ . | markdownify }}
+        {{ . | markdownify  | safeHTML }}
       </div>
       {{ end }}
 
@@ -50,7 +50,7 @@
                 <div class="mini-card-subtitle">{{ . }}</div>
               {{ end }}
               {{ with $card.summary }}
-                <div class="mini-card-summary">{{ . | markdownify }}</div>
+                <div class="mini-card-summary">{{ . | markdownify | safeHTML  }}</div>
               {{ end }}
             </div>
           </a>
@@ -68,7 +68,7 @@
 
       {{ with .Params.BigCards_text }}
       <div class="section-intro">
-        {{ . | markdownify }}
+        {{ . | markdownify  | safeHTML }}
       </div>
       {{ end }}
 

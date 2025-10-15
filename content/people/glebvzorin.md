@@ -4,7 +4,7 @@ type: "people"
 
 user_groups: ["Researcher"]
 photo: "/images/photo/default-avatar.png"
-role: "PostDoc"
+role: "Postdoc"
 department:
   - "SISU"
   - "NIL"

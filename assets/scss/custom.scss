@@ -454,8 +454,9 @@ nav a:hover {
   line-height: 1.6;
 }
 
-.section-intro p {
-  margin-bottom: 1em;
+.section-intro p,
+.section-intro li  {
+  margin-bottom: 1.5em;
 }
 
 .section-intro p:last-child {

@@ -20,8 +20,8 @@ miniCards_text: |
           Vertical interdisciplinarity, in turn, delves deeply into the neural mechanisms underlying subjective experience and human behavior. By combining advanced neuroimaging techniques—MEG, fMRI, and EEG—with mathematical and statistical modeling, NIL investigates how the brain represents images and scenes, processes time, and encodes space. These studies are conceptually embedded within an aesthetic framework, where neuroaesthetics—the neuroscience of beauty and art—forms a central pillar of NIL’s scientific identity.
 
 miniCards:
-  - title: "Introducing NIL"
-    url: "/introduction/introducing_nil/"
+  - title: "NIL Research"
+    url: "/introduction/research/"
   - title: "Founding Members"
     url: "/people/founding_members/"
 ---

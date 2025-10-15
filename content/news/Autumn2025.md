@@ -5,7 +5,7 @@ type: content
 miniCards_title: | 
     Autumn School at SISU 
     
-    (weekends, Oct. 25 –Nov. 9, 2025)
+    (weekends, Oct. 25 –Nov. 16, 2025)
 miniCards_text: | 
     ## Sustainability and Cognitive Neuroscience:
     ## Time in Aesthetics / Aesthetics of Time 

@@ -6,7 +6,7 @@ BigCards_title: "News"
 BigCards_text: | 
 
 BigCards:
-  - name: "Autumn 2025 (weekends, Oct. 25 –Nov. 9, 2025)"
+  - name: "Autumn 2025 (weekends, Oct. 25 –Nov. 16, 2025)"
     affiliation: Sustainability and Cognitive Neuroscience:Time in Aesthetics / Aesthetics of Time
     bio: 
     photo: "/images/autumnschool.png"
@@ -16,5 +16,5 @@ BigCards:
     affiliation: postdoctoral Fellow / Assistant Research Fellow
     bio: 
     photo: "/images/members.png"
-    url: "/people/recruitment"
+    url: "/people/open_positions"
 ---
