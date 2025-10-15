@@ -23,7 +23,7 @@ miniCards:
   - title: "Introducing NIL"
     url: "/introduction/introducing_nil/"
   - title: "Founding Members"
-    url: "/introduction/founding_members/"
+    url: "/people/founding_members/"
 ---
 
 
