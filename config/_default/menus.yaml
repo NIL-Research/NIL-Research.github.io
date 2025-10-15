@@ -8,25 +8,24 @@ main:
     url: /introduction/
     weight: 10
   - name: Research
-    url: /introduction/#research
-    weight: 1
-    parent: About
-  - name: Equipment
-    url: /introduction/#equipment
-    weight: 2
-    parent: About
+    url: /introduction/research
+    weight: 11
 
 
   - name: People
     url: /people/
     weight: 20
-  - name: Our Team
-    url: /people/
+  - name: Founding Members
+    url: /people/founding_members
     weight: 1
     parent: People
-  - name: Join Us
-    url: /people/recruitment
+  - name: Team
+    url: /people/
     weight: 2
+    parent: People
+  - name: Contacts
+    url: /contacts
+    weight: 3
     parent: People
 
 
@@ -54,9 +53,10 @@ main:
   - name: Networks
     url: networks
     weight: 40
+  
+  - name: Open Positions
+    url: /people/open_positions
+    weight: 41
   - name: News
     url: news
     weight: 50
-  - name: Contacts
-    url: contacts
-    weight: 60

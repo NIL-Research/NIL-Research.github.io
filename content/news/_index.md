@@ -13,7 +13,7 @@ BigCards:
     url: "/news/autumn2025/"
 
   - name: "Join Us"
-    affiliation: ostdoctoral Fellow / Assistant Research Fellow
+    affiliation: postdoctoral Fellow / Assistant Research Fellow
     bio: 
     photo: "/images/members.png"
     url: "/people/recruitment"

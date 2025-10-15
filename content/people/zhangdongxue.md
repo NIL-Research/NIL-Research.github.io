@@ -2,10 +2,8 @@
 title: "Dongxue ZHANG"
 type: "people"
 
-user_groups: ["Researcher"]
+user_groups: ["Students"]
 photo: "/images/photo/default-avatar.png"
-role: "PostDoc"
+role: "Visiting Student"
 department:
-  - "SISU"
-  - "NIL"
 ---

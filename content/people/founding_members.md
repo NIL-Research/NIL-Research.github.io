@@ -1,5 +1,6 @@
 ---
 title: Founding Members
+type: content
 
 miniCards_title: "Founding Members"
 miniCards_text: 

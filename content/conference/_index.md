@@ -16,9 +16,10 @@ hero_location: "Shanghai International Studies University, Shanghai, China"
 
 # === Organizers ===
 organizers:
-  - "Neurocognitive Image Lab, SISU"
-  - "Department of Cognitive Science, SISU"
-  - "World Artificial Intelligence Institute (WAI)"
+  - "Neurocognitive Image Lab (NIL), SISU"
+  - "World Arthistory Institute (WAI), SISU"
+  - "Institute of Language Sciences (ILS), SISU"
+  - Office of International Cooperation and Exchange (OICE),SISU
 
 # === Welcome Message ===
 welcome:
