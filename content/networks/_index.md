@@ -25,23 +25,18 @@ BigCards:
   - name: "PTB Berlin"
     affiliation: "Physikalisch-Technische Bundesanstalt"
     bio:  
-    photo: "/images/networks/ptb.jpg"
+    photo: "/images/ptb-logo.png"
     url: "https://www.ptb.de/"
   - name: "VDW"
     affiliation: "Verband Deutscher Wissenschaftler"
     bio: 
-    photo: "/images/networks/vdw.jpg"
-    url: "https://www.vdw.de/"
+    photo: "/images/vdw-logo.jpg"
+    url: "https://vdw-ev.de/"
   - name: "Para Limes"
     affiliation: "Para Limes Research Group"
     bio:  
-    photo: "/images/networks/paralimes.jpg"
+    photo: "/images/paralimes-logo.png"
     url: "https://www.paralimes.org/"
-  - name: "NeuroCine Consortium"
-    affiliation: "International Research Network"
-    bio:  
-    photo:  
-    url: "#"
 ---
 
 
