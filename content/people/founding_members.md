@@ -17,7 +17,7 @@ miniCards:
 
   - title: "Nikos Logothetis"
     url: /people/nikoslogothetis
-    image: "/images/photo/NikosLogothetis.jpg"
+    image: "/images/photo/nikoslogothetis.jpg"
     subtitle: 
     summary: | 
         Director of CEBSIT, 
