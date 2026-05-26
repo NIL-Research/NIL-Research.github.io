@@ -340,6 +340,8 @@
                     <span></span>
                 </button>
 
+                <div class="menu-overlay" onclick="toggleMenu()"></div>
+
                 <nav id="mainNav">
                 <ul>
                     {{- range .Site.Menus.main -}}
@@ -442,9 +444,6 @@
         <p>&copy; {{ now.Year }} NIL - Neurocognitive Image Lab. All rights reserved.</p>
     </footer>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="menu-overlay" onclick="toggleMenu()"></div>
-
     <script>
         function toggleMenu() {
             const nav = document.getElementById('mainNav');
@@ -470,7 +469,6 @@
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 const nav = document.getElementById('mainNav');
-                const overlay = document.querySelector('.menu-overlay');
                 if (nav.classList.contains('active')) {
                     toggleMenu();
                 }
