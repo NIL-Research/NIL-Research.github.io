@@ -334,6 +334,12 @@
                     </a>
                 </div>
 
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
                 <nav id="mainNav">
                 <ul>
                     {{- range .Site.Menus.main -}}
@@ -447,6 +453,7 @@
 
             nav.classList.toggle('active');
             overlay.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', nav.classList.contains('active') ? 'true' : 'false');
 
             const spans = menuToggle.querySelectorAll('span');
             if (nav.classList.contains('active')) {
@@ -479,6 +486,7 @@
 
                 const menuToggle = document.querySelector('.menu-toggle');
                 const spans = menuToggle.querySelectorAll('span');
+                menuToggle.setAttribute('aria-expanded', 'false');
                 spans[0].style.transform = 'none';
                 spans[1].style.opacity = '1';
                 spans[2].style.transform = 'none';

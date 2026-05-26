@@ -1,18 +1,9 @@
 {{ define "main" }}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
-  {{ $styles := resources.Get "scss/custom.scss" | toCSS }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-</head>
-<body class="conference-page">
+<div class="conference-page">
 
   <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content container">
+  <section class="conference-hero">
+    <div class="conference-hero-content">
       <h1 class="hero-title">{{ .Params.hero_title }}</h1>
       <h2 class="hero-subtitle">{{ .Params.hero_subtitle }}</h2>
       <div class="hero-details">
@@ -48,14 +39,14 @@
   <!-- Welcome Message -->
   {{ if .Params.welcome }}
   <section id="welcome" class="section">
-    <!-- <div class="section-container"> -->
+    <div class="section-container">
       <h2 class="section-title">Welcome</h2>
-      <div style="max-width:800px;margin:0 auto;line-height:1.8;">
+      <div class="conference-welcome">
         {{ range .Params.welcome }}
-          <p style="margin-bottom:20px;">{{ . }}</p>
+          <p>{{ . }}</p>
         {{ end }}
       </div>
-    <!-- </div> -->
+    </div>
   </section>
   {{ end }}
 
@@ -79,13 +70,13 @@
       {{ end }}
 
       {{ if .Params.schedule_pdf }}
-      <div style="max-width:1000px;margin:0 auto;">
+      <div class="schedule-pdf">
         <iframe src="{{ .Params.schedule_pdf }}" 
-                style="width:100%;height:800px;border:1px solid #e0e0e0;" 
+                class="schedule-pdf-frame"
                 frameborder="0" 
                 allowfullscreen>
         </iframe>
-        <p style="text-align:center;margin-top:15px;">
+        <p class="schedule-pdf-link">
           <a href="{{ .Params.schedule_pdf }}" download>Download PDF</a>
         </p>
       </div>
@@ -120,19 +111,18 @@
   <!-- Venue -->
   {{ if .Params.venue }}
   <section id="venue" class="section">
-    <h2 class="section-title">Conference Venue</h2>
-    <div class="venue-content">
-      <h3 style="color:var(--primary-color);margin-bottom:20px;">{{ .Params.venue.name }}</h3>
-      <p style="max-width:800px;margin:0 auto 30px;line-height:1.6;">
-        {{ .Params.venue.description }}
-      </p>
-      {{ if .Params.venue.image }}
-      <img src="{{ .Params.venue.image }}" alt="{{ .Params.venue.name }}" class="venue-image">
-      {{ end }}
+    <div class="section-container">
+      <h2 class="section-title">Conference Venue</h2>
+      <div class="venue-content">
+        <h3>{{ .Params.venue.name }}</h3>
+        <p>{{ .Params.venue.description }}</p>
+        {{ if .Params.venue.image }}
+        <img src="{{ .Params.venue.image }}" alt="{{ .Params.venue.name }}" class="venue-image">
+        {{ end }}
+      </div>
     </div>
   </section>
   {{ end }}
 
-</body>
-</html>
+</div>
 {{ end }}
