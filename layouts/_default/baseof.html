@@ -375,12 +375,18 @@
     </section>
 
     <!-- Current_Events -->
-    {{ if .Params.current_Events }}
+    {{ $currentEvents := .Params.current_Events }}
+    {{ if .IsHome }}
+        {{ with .Site.Data.home.current_events }}
+            {{ $currentEvents = . }}
+        {{ end }}
+    {{ end }}
+    {{ if $currentEvents }}
     <section id="current_Events" class="section-transparent">
     <div class="container">
         <!-- <h2 class="section-title-transparent">Current Events</h2> -->
         <div class="event-grid">
-        {{ range .Params.current_Events }}
+        {{ range $currentEvents }}
             <a href="{{ .url | relURL }}" class="event-card" target="{{ if hasPrefix .url "http" }}_blank{{ else }}_self{{ end }}" rel="noopener">
             <div class="partner-name">{{ .name }}</div>
             </a>
@@ -391,18 +397,29 @@
     {{ end }}
 
     <!-- mark mainCards -->
-    {{ if or .Params.markCards_title .Params.markCards_text .Params.markCards_images }}
+    {{ $quickLinks := .Site.Data.home.quick_links }}
+    {{ $markCardsTitle := .Params.markCards_title }}
+    {{ $markCardsText := .Params.markCards_text }}
+    {{ $markCardsImages := .Params.markCards_images }}
+    {{ if .IsHome }}
+        {{ with $quickLinks }}
+            {{ with .title }}{{ $markCardsTitle = . }}{{ end }}
+            {{ with .text }}{{ $markCardsText = . }}{{ end }}
+            {{ with .images }}{{ $markCardsImages = . }}{{ end }}
+        {{ end }}
+    {{ end }}
+    {{ if or $markCardsTitle $markCardsText $markCardsImages }}
     <section class="section">
         <div class="section-container">
-        <h2 class="section-title">{{ .Params.markCards_title }}</h2>
+        <h2 class="section-title">{{ $markCardsTitle }}</h2>
 
-        {{ with .Params.markCards_text }}
+        {{ with $markCardsText }}
         <div class="section-intro">
             {{ . | markdownify }}
         </div>
         {{ end }}
 
-        {{ with .Params.markCards_images }}
+        {{ with $markCardsImages }}
         <div class="maincards-images">
             {{ range . }}
             <img src="{{ . }}" alt="" class="maincards-image">
