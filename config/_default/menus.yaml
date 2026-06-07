@@ -1,62 +1,100 @@
 # Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
+# The first-level navigation items link to the first page in each section.
 
 main:
   - name: About
+    identifier: about
     url: /introduction/
     weight: 10
-  - name: Research
-    url: /introduction/research
-    weight: 11
+  - name: Lab Introduction
+    parent: about
+    url: /introduction/
+    weight: 1
+  - name: Origin Story
+    parent: about
+    url: /introduction/origin-story/
+    weight: 2
+  - name: Mission & Vision
+    parent: about
+    url: /introduction/mission-vision/
+    weight: 3
+  - name: Networks
+    parent: about
+    url: /networks/
+    weight: 4
 
+  - name: Research
+    identifier: research
+    url: /introduction/research/
+    weight: 20
+  - name: Research Areas
+    parent: research
+    url: /introduction/research/
+    weight: 1
+  - name: Projects
+    parent: research
+    url: /research/projects/
+    weight: 2
+  - name: Publications / Outputs
+    parent: research
+    url: /publication/
+    weight: 3
 
   - name: People
-    url: /people/
-    weight: 20
-  - name: Founding Members
-    url: /people/founding_members
-    weight: 1
-    parent: People
-  - name: Team
-    url: /people/
-    weight: 2
-    parent: People
-  - name: Contacts
-    url: /contacts
-    weight: 3
-    parent: People
-
-
-  - name: Conference
-    url: /conference/
+    identifier: people
+    url: /people/founding_members/
     weight: 30
-    identifier: Conference
-  - name: Organizers
-    url: /conference/#organizers
+  - name: Founding Members
+    parent: people
+    url: /people/founding_members/
     weight: 1
-    parent: Conference
-  - name: Welcome Message
-    url: /conference/#welcome
+  - name: Teams
+    parent: people
+    url: /people/
     weight: 2
-    parent: Conference
-  - name: Schedule
-    url: /conference/#schedule
-    weight: 3
-    parent: Conference
-  - name: Venue
-    url: /conference/#venue
-    weight: 4
-    parent: Conference
 
-  - name: Networks
-    url: networks
+  - name: Opportunities
+    identifier: opportunities
+    url: /people/open_positions/
     weight: 40
-  
   - name: Open Positions
-    url: /people/open_positions
-    weight: 41
-  - name: News
-    url: news
+    parent: opportunities
+    url: /people/open_positions/
+    weight: 1
+  - name: Graduate Admission
+    parent: opportunities
+    url: /opportunities/graduate-admission/
+    weight: 2
+  - name: Summer School Recruitment
+    parent: opportunities
+    url: /opportunities/summer-school-recruitment/
+    weight: 3
+  - name: Visiting Students
+    parent: opportunities
+    url: /opportunities/visiting-students/
+    weight: 4
+
+  - name: News & Events
+    identifier: news-events
+    url: /news/
     weight: 50
+  - name: Lab News
+    parent: news-events
+    url: /news/
+    weight: 1
+  - name: Conferences
+    parent: news-events
+    url: /conference/
+    weight: 2
+  - name: Summer Schools
+    parent: news-events
+    url: /news/summer-schools/
+    weight: 3
+  - name: Reports & Talks
+    parent: news-events
+    url: /news/reports-talks/
+    weight: 4
+
+  - name: Contact
+    url: /contacts/
+    weight: 60
