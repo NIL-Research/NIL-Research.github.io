@@ -1,4 +1,68 @@
 <script>
+    (function () {
+        const path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        if (path !== '/') {
+            return;
+        }
+
+        const preferredLanguage = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        if (/^en\b/i.test(preferredLanguage) && !sessionStorage.getItem('nilLanguageChoice')) {
+            window.location.replace('{{ "/en/" | relURL }}');
+        }
+    })();
+
+    document.querySelectorAll('.language-switcher a').forEach(link => {
+        link.addEventListener('click', () => {
+            sessionStorage.setItem('nilLanguageChoice', 'manual');
+        });
+    });
+
+    function splitTitleLine(line) {
+        if (!line || line.dataset.fitted === 'true') {
+            return;
+        }
+
+        const text = line.textContent.trim();
+        line.setAttribute('aria-label', text);
+        line.textContent = '';
+
+        Array.from(text).forEach(character => {
+            const span = document.createElement('span');
+            span.setAttribute('aria-hidden', 'true');
+            span.textContent = character;
+            line.appendChild(span);
+        });
+
+        line.dataset.fitted = 'true';
+    }
+
+    function alignHomeTitleLines() {
+        const title = document.querySelector('.hero-title-stack .main-title');
+        const heroTitleStack = document.querySelector('.hero-title-stack');
+        const heroSubtitleStack = document.querySelector('.hero-subtitle-stack');
+        const fittedLines = document.querySelectorAll('.main-title-local, .subtitle-local');
+
+        if (!title || !heroTitleStack || !heroSubtitleStack || fittedLines.length === 0) {
+            return;
+        }
+
+        fittedLines.forEach(splitTitleLine);
+
+        const titleWidth = title.getBoundingClientRect().width;
+        if (titleWidth > 0) {
+            const measuredWidth = `${titleWidth.toFixed(2)}px`;
+            heroTitleStack.style.setProperty('--nil-measured-width', measuredWidth);
+            heroSubtitleStack.style.setProperty('--nil-measured-width', measuredWidth);
+        }
+    }
+
+    alignHomeTitleLines();
+    window.addEventListener('resize', alignHomeTitleLines);
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(alignHomeTitleLines);
+    }
+
     function toggleMenu() {
         const nav = document.getElementById('mainNav');
         const overlay = document.querySelector('.menu-overlay');

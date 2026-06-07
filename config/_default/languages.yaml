@@ -1,22 +1,14 @@
 # Languages
-#   Create a section for each of your site's languages.
-#   Documentation: https://docs.hugoblox.com/reference/language/
+# The bilingual pilot only applies to the homepage.
 
-# Default language
+zh:
+  locale: zh-Hans
+  label: 中文
+  contentDir: content/zh
+  title: NIL
+
 en:
-  languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
-
-# Uncomment the lines below to configure your website in a second language.
-# zh:
-#  languageCode: zh-Hans
-#  contentDir: content/zh
-#  title: Chinese website title...
-#  params:
-#    description: Site description in Chinese...
-#  menu:
-#    main:
-#      - name: 传
-#        url: '#about'
-#        weight: 1
+  locale: en-US
+  label: English
+  contentDir: content/en
+  title: NIL

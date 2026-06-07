@@ -1,5 +1,18 @@
 {{ define "main" }}
-    <h1 class="main-title">{{ .Title }}</h1>
-    <p class="subtitle">{{ .Params.subtitle }}</p>
-    <p class="description">{{ .Content | markdownify }}</p>
+    {{ $home := . }}
+    <div class="hero-title-stack">
+        <h1 class="main-title">{{ $home.Title }}</h1>
+        {{ with $home.Params.title_local }}
+        <div class="main-title-local">{{ . }}</div>
+        {{ end }}
+    </div>
+    <div class="hero-subtitle-stack">
+        <p class="subtitle">{{ $home.Params.subtitle }}</p>
+        {{ with $home.Params.subtitle_local }}
+        <p class="subtitle-local">{{ . }}</p>
+        {{ end }}
+    </div>
+    {{ with $home.Content }}
+    <p class="description">{{ $home.Content | markdownify }}</p>
+    {{ end }}
 {{ end }}

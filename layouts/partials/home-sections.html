@@ -11,8 +11,14 @@
     <!-- <h2 class="section-title-transparent">Current Events</h2> -->
     <div class="event-grid">
     {{ range $currentEvents }}
+        {{ $eventName := .name }}
+        {{ if eq $.Site.Language.Lang "zh" }}
+            {{ with .name_zh }}{{ $eventName = . }}{{ end }}
+        {{ else if eq $.Site.Language.Lang "en" }}
+            {{ with .name_en }}{{ $eventName = . }}{{ end }}
+        {{ end }}
         <a href="{{ .url | relURL }}" class="event-card" target="{{ if hasPrefix .url "http" }}_blank{{ else }}_self{{ end }}" rel="noopener">
-        <div class="partner-name">{{ .name }}</div>
+        <div class="partner-name">{{ $eventName }}</div>
         </a>
     {{ end }}
     </div>
@@ -25,13 +31,19 @@
 {{ $markCardsTitle := .Params.markCards_title }}
 {{ $markCardsText := .Params.markCards_text }}
 {{ $markCardsImages := .Params.markCards_images }}
-{{ if .IsHome }}
-    {{ with $quickLinks }}
-        {{ with .title }}{{ $markCardsTitle = . }}{{ end }}
-        {{ with .text }}{{ $markCardsText = . }}{{ end }}
-        {{ with .images }}{{ $markCardsImages = . }}{{ end }}
+    {{ if .IsHome }}
+        {{ with $quickLinks }}
+            {{ with .title }}{{ $markCardsTitle = . }}{{ end }}
+            {{ if eq $.Site.Language.Lang "zh" }}
+                {{ with .text_zh }}{{ $markCardsText = . }}{{ else }}{{ with .text }}{{ $markCardsText = . }}{{ end }}{{ end }}
+            {{ else if eq $.Site.Language.Lang "en" }}
+                {{ with .text_en }}{{ $markCardsText = . }}{{ else }}{{ with .text }}{{ $markCardsText = . }}{{ end }}{{ end }}
+            {{ else }}
+                {{ with .text }}{{ $markCardsText = . }}{{ end }}
+            {{ end }}
+            {{ with .images }}{{ $markCardsImages = . }}{{ end }}
+        {{ end }}
     {{ end }}
-{{ end }}
 {{ if or $markCardsTitle $markCardsText $markCardsImages }}
 <section class="section">
     <div class="section-container">

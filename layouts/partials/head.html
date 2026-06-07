@@ -34,11 +34,62 @@
             margin: 0;
         }
 
-        .subtitle {
-            font-size: clamp(28px, 4vw, 48px);
+        .hero-title-stack {
+            --nil-title-size: clamp(80px, 12vw, 144px);
+            --nil-measured-width: calc(var(--nil-title-size) * 1.44);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: var(--nil-title-size);
+            text-align: center;
+        }
+
+        .hero-title-stack .main-title {
+            display: inline-block;
+            font-size: 1em;
+            line-height: 0.95;
+        }
+
+        .main-title-local {
             color: #005a9c;
-            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: calc(var(--nil-measured-width) / 5.2);
+            font-weight: 700;
+            line-height: 1.05;
+            margin-top: 4px;
+            width: var(--nil-measured-width);
+            white-space: nowrap;
+            text-align: initial;
+        }
+
+        .subtitle {
+            font-size: clamp(26px, 3.8vw, 46px);
+            color: #005a9c;
+            margin-top: 24px;
             font-weight: 400;
+        }
+
+        .hero-subtitle-stack {
+            --nil-title-size: clamp(80px, 12vw, 144px);
+            --nil-measured-width: calc(var(--nil-title-size) * 1.44);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .subtitle-local {
+            color: #005a9c;
+            display: flex;
+            justify-content: space-between;
+            font-size: calc(var(--nil-measured-width) / 9.35);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-top: 6px;
+            width: var(--nil-measured-width);
+            white-space: nowrap;
+            text-align: initial;
         }
 
         .description {
@@ -315,6 +366,45 @@
 
         .menu-overlay.active {
             display: block;
+        }
+
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .language-switcher a,
+        .language-switcher a:visited,
+        .language-switcher a:hover,
+        .language-switcher a:focus {
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .language-switcher a[lang="zh-Hans"] {
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title-stack {
+                --nil-title-size: 80px;
+            }
+
+            .hero-subtitle-stack {
+                --nil-title-size: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title-stack {
+                --nil-title-size: 60px;
+            }
+
+            .hero-subtitle-stack {
+                --nil-title-size: 60px;
+            }
         }
     </style>
 </head>

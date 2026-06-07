@@ -8,3 +8,46 @@ imports:
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-decap-cms
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+
+mounts:
+  - source: assets
+    target: assets
+  - source: data
+    target: data
+  - source: layouts
+    target: layouts
+  - source: static
+    target: static
+  - source: content/zh
+    target: content
+    lang: zh
+  - source: content/en
+    target: content
+    lang: en
+  - source: content/conference
+    target: content/conference
+    lang: zh
+  - source: content/contacts
+    target: content/contacts
+    lang: zh
+  - source: content/introduction
+    target: content/introduction
+    lang: zh
+  - source: content/networks
+    target: content/networks
+    lang: zh
+  - source: content/news
+    target: content/news
+    lang: zh
+  - source: content/opportunities
+    target: content/opportunities
+    lang: zh
+  - source: content/people
+    target: content/people
+    lang: zh
+  - source: content/publication
+    target: content/publication
+    lang: zh
+  - source: content/research
+    target: content/research
+    lang: zh
