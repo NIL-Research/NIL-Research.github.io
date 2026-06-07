@@ -15,6 +15,14 @@
 
     {{ partial "nav.html" . }}
 
+    <div class="language-switcher">
+        {{ if eq .Site.Language.Lang "en" }}
+        <a href="{{ "/" | relURL }}" lang="zh-Hans">中文</a>
+        {{ else }}
+        <a href="{{ "/en/" | relURL }}" lang="en">EN</a>
+        {{ end }}
+    </div>
+
     <div class="logo-right">
         <a href="{{ "/" | relURL }}">
             <img src="{{ "/images/SISU-logo-trans.png" | relURL }}" alt="SISU Right Logo">
