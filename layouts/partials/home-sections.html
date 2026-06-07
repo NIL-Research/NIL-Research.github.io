@@ -1,0 +1,81 @@
+<!-- Current_Events -->
+{{ $currentEvents := .Params.current_Events }}
+{{ if .IsHome }}
+    {{ with .Site.Data.home.current_events }}
+        {{ $currentEvents = . }}
+    {{ end }}
+{{ end }}
+{{ if $currentEvents }}
+<section id="current_Events" class="section-transparent">
+<div class="container">
+    <!-- <h2 class="section-title-transparent">Current Events</h2> -->
+    <div class="event-grid">
+    {{ range $currentEvents }}
+        <a href="{{ .url | relURL }}" class="event-card" target="{{ if hasPrefix .url "http" }}_blank{{ else }}_self{{ end }}" rel="noopener">
+        <div class="partner-name">{{ .name }}</div>
+        </a>
+    {{ end }}
+    </div>
+</div>
+</section>
+{{ end }}
+
+<!-- mark mainCards -->
+{{ $quickLinks := .Site.Data.home.quick_links }}
+{{ $markCardsTitle := .Params.markCards_title }}
+{{ $markCardsText := .Params.markCards_text }}
+{{ $markCardsImages := .Params.markCards_images }}
+{{ if .IsHome }}
+    {{ with $quickLinks }}
+        {{ with .title }}{{ $markCardsTitle = . }}{{ end }}
+        {{ with .text }}{{ $markCardsText = . }}{{ end }}
+        {{ with .images }}{{ $markCardsImages = . }}{{ end }}
+    {{ end }}
+{{ end }}
+{{ if or $markCardsTitle $markCardsText $markCardsImages }}
+<section class="section">
+    <div class="section-container">
+    <h2 class="section-title">{{ $markCardsTitle }}</h2>
+
+    {{ with $markCardsText }}
+    <div class="section-intro">
+        {{ . | markdownify }}
+    </div>
+    {{ end }}
+
+    {{ with $markCardsImages }}
+    <div class="maincards-images">
+        {{ range . }}
+        <img src="{{ . }}" alt="" class="maincards-image">
+        {{ end }}
+    </div>
+    {{ end }}
+    </div>
+</section>
+{{ end }}
+
+<!-- 只在首页显示 Features Section
+{{ if eq .Kind "home" }}
+<section class="features-section">
+    <div class="feature-item">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="feature-item">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="feature-item">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="feature-item">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</section>
+{{ end }} -->

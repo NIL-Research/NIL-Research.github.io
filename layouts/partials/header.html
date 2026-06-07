@@ -1,0 +1,23 @@
+<header class="header">
+    <div class="logo-left">
+        <a href="{{ "/" | relURL }}">
+            <img src="{{ "/images/nil-logo-trans.png" | relURL }}" alt="NIL Left Logo">
+        </a>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+    {{ partial "nav.html" . }}
+
+    <div class="logo-right">
+        <a href="{{ "/" | relURL }}">
+            <img src="{{ "/images/SISU-logo-trans.png" | relURL }}" alt="SISU Right Logo">
+        </a>
+    </div>
+</header>
