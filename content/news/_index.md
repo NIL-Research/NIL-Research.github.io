@@ -1,12 +1,13 @@
 ---
-title: "News"
+title: "Lab News"
 type: content
 
-BigCards_title: "News"
-BigCards_text: | 
+BigCards_title: "Lab News"
+BigCards_text: |
+  Latest updates from the Neurocognitive Image Lab.
 
 BigCards:
-  - name: "Autumn 2025 (weekends, Oct. 25 –Nov. 16, 2025)"
+  - name: "Autumn 2025 (weekends, Oct. 25-Nov. 16, 2025)"
     affiliation: Sustainability and Cognitive Neuroscience:Time in Aesthetics / Aesthetics of Time
     bio: 
     photo: "/images/autumnschool.png"

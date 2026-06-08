@@ -1,6 +1,9 @@
 ---
 title: "Autumn 2025"
 type: content
+news_title: "Autumn School 2025"
+news_summary: "Sustainability and Cognitive Neuroscience: Time in Aesthetics / Aesthetics of Time."
+news_image: "/images/autumnschool.png"
 
 miniCards_title: | 
     Autumn School at SISU 

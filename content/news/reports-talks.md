@@ -1,6 +1,7 @@
 ---
 title: "Reports & Talks"
 type: content
+exclude_from_news: true
 
 mainCards_title: "Reports & Talks"
 mainCards_text: |

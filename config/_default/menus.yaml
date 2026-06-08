@@ -84,15 +84,15 @@ main:
     weight: 1
   - name: Conferences
     parent: news-events
-    url: /conference/
+    url: /events/conferences/
     weight: 2
   - name: Summer Schools
     parent: news-events
-    url: /news/summer-schools/
+    url: /events/summer-schools/
     weight: 3
   - name: Reports & Talks
     parent: news-events
-    url: /news/reports-talks/
+    url: /events/reports-talks/
     weight: 4
 
   - name: Contact
