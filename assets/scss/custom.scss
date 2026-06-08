@@ -726,6 +726,15 @@ nav a:hover {
         background: transparent;
     }
 
+    .language-switcher {
+        position: absolute;
+        right: 52px;
+        top: 50%;
+        transform: translateY(calc(-50% - 3px));
+        z-index: 1001;
+        flex: 0 0 auto;
+    }
+
     .menu-toggle span {
         width: 26px;
         height: 3px;

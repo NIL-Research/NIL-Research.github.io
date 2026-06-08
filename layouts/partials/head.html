@@ -1,5 +1,6 @@
 <head>
     {{ partial "seo.html" . }}
+    {{ partial "schema.html" . }}
     <!-- 引入公共样式 (SCSS) -->
     {{ $custom := resources.Get "scss/custom.scss" | css.Sass | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
