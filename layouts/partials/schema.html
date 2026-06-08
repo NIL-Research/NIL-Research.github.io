@@ -1,0 +1,25 @@
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "@id" ("/#organization" | absURL)
+  "name" "NIL"
+  "legalName" "Neurocognitive Image Lab"
+  "alternateName" (slice
+    "零点实验室"
+    "Neurocognitive Image Lab"
+    "Neurocognitive Image Laboratory"
+    "神经认知图像实验室"
+  )
+  "url" ("/" | absURL)
+  "logo" ("/images/nil-logo-trans.png" | absURL)
+  "description" "NIL (零点实验室), also known as the Neurocognitive Image Lab, Neurocognitive Image Laboratory, and 神经认知图像实验室, is affiliated with Shanghai International Studies University (上海外国语大学)."
+  "parentOrganization" (dict
+    "@type" "CollegeOrUniversity"
+    "name" "Shanghai International Studies University"
+    "alternateName" (slice "上海外国语大学" "SISU")
+    "url" "https://www.shisu.edu.cn/"
+  )
+-}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>

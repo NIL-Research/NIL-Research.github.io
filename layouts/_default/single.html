@@ -14,8 +14,8 @@
 
       {{ with .Params.mainCards_images }}
       <div class="maincards-images">
-        {{ range . }}
-          <img src="{{ . }}" alt="" class="maincards-image">
+        {{ range $index, $image := . }}
+          <img src="{{ $image }}" alt="{{ $.Title }} image {{ $index }}" class="maincards-image">
         {{ end }}
       </div>
       {{ end }}
