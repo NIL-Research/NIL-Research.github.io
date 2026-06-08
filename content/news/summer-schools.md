@@ -1,6 +1,7 @@
 ---
 title: "Summer Schools"
 type: content
+exclude_from_news: true
 
 mainCards_title: "Summer Schools"
 mainCards_text: |

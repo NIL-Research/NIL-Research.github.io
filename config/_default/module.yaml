@@ -27,6 +27,9 @@ mounts:
   - source: content/conference
     target: content/conference
     lang: zh
+  - source: content/events
+    target: content/events
+    lang: zh
   - source: content/contacts
     target: content/contacts
     lang: zh
