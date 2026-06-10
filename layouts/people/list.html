@@ -2,7 +2,7 @@
 
 {{ $people := where site.RegularPages "Section" "people" }}
 {{ $groups := .Params.user_group }}
-{{ with hugo.Data.people.groups }}
+{{ with site.Data.people.groups }}
   {{ $groups = . }}
 {{ end }}
 
