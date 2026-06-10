@@ -1,14 +1,21 @@
 # Languages
-# The bilingual pilot only applies to the homepage.
 
 zh:
-  locale: zh-Hans
-  label: 中文
+  languageCode: zh-Hans
+  languageName: 中文
+  weight: 1
   contentDir: content/zh
   title: NIL
+  params:
+    language_label: 中文
+    switch_label: 中文
 
 en:
-  locale: en-US
-  label: English
+  languageCode: en-US
+  languageName: English
+  weight: 2
   contentDir: content/en
   title: NIL
+  params:
+    language_label: English
+    switch_label: EN
