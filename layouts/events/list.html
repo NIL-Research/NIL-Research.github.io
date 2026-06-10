@@ -1,5 +1,11 @@
 {{ define "main" }}
 {{ $pastTitle := "Past Schools" }}
+{{ $newsURL := "/news/" | relURL }}
+{{ $emptyNewsText := "Latest news will be updated soon." }}
+{{ if eq .Site.Language.Lang "zh" }}
+  {{ $emptyNewsText = "最新动态将陆续更新。" }}
+{{ end }}
+{{ $latestNewsPages := first 4 (sort (where (where site.RegularPages "Section" "news") "Params.exclude_from_news" "ne" true) "Date" "desc") }}
 {{ if eq .RelPermalink "/events/" }}
   {{ $pastTitle = "Recent & Past Highlights" }}
 {{ else if eq .Params.event_category "conferences" }}
@@ -96,18 +102,31 @@
     </div>
     {{ end }}
 
-    {{ with .Params.latest_news }}
-    <h2 class="section-title">Latest News</h2>
+    {{ if .Params.show_latest_news }}
+    <h2 class="section-title"><a href="{{ $newsURL }}">Latest News</a></h2>
+    {{ if gt (len $latestNewsPages) 0 }}
     <div class="mini-cards-grid">
-      {{ range . }}
-        <a href="{{ .url | relURL }}" class="mini-card">
+      {{ range $latestNewsPages }}
+        {{ $title := .Params.news_title | default .Title }}
+        {{ $summary := .Params.news_summary | default .Summary }}
+        {{ $image := or .Params.news_image .Params.image .Params.photo }}
+        <a href="{{ .RelPermalink }}" class="mini-card">
+          {{ with $image }}
+            <div class="mini-card-image">
+              <img src="{{ . | relURL }}" alt="{{ $title }}">
+            </div>
+          {{ end }}
           <div class="mini-card-content">
-            <h3 class="mini-card-title">{{ .title }}</h3>
-            {{ with .summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
+            <h3 class="mini-card-title">{{ $title }}</h3>
+            {{ with $summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
           </div>
         </a>
       {{ end }}
     </div>
+    {{ else }}
+      <div class="section-intro">{{ $emptyNewsText }}</div>
+    {{ end }}
+    <div class="section-intro"><a href="{{ $newsURL }}">More News</a></div>
     {{ end }}
   </div>
 </section>
@@ -227,20 +246,33 @@
 </section>
 {{ end }}
 
-{{ with .Params.latest_news }}
+{{ if .Params.show_latest_news }}
 <section class="section">
   <div class="section-container">
-    <h2 class="section-title">Latest News</h2>
+    <h2 class="section-title"><a href="{{ $newsURL }}">Latest News</a></h2>
+    {{ if gt (len $latestNewsPages) 0 }}
     <div class="mini-cards-grid">
-      {{ range . }}
-        <a href="{{ .url | relURL }}" class="mini-card">
+      {{ range $latestNewsPages }}
+        {{ $title := .Params.news_title | default .Title }}
+        {{ $summary := .Params.news_summary | default .Summary }}
+        {{ $image := or .Params.news_image .Params.image .Params.photo }}
+        <a href="{{ .RelPermalink }}" class="mini-card">
+          {{ with $image }}
+            <div class="mini-card-image">
+              <img src="{{ . | relURL }}" alt="{{ $title }}">
+            </div>
+          {{ end }}
           <div class="mini-card-content">
-            <h3 class="mini-card-title">{{ .title }}</h3>
-            {{ with .summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
+            <h3 class="mini-card-title">{{ $title }}</h3>
+            {{ with $summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
           </div>
         </a>
       {{ end }}
     </div>
+    {{ else }}
+      <div class="section-intro">{{ $emptyNewsText }}</div>
+    {{ end }}
+    <div class="section-intro"><a href="{{ $newsURL }}">More News</a></div>
   </div>
 </section>
 {{ end }}

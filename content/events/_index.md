@@ -2,44 +2,38 @@
 title: "News & Events"
 type: events
 unified_panel: true
+show_latest_news: true
 
 events_title: "News & Events"
 events_text: |
-  News & Events brings together NIL's current programs, event series, past highlights, and lab updates.
+  News & Events 汇总 NIL 的新闻动态、会议、暑期学校、讲座与学术活动，包括当前重点项目、活动系列、往期回顾和实验室更新。
 
 featured:
-  title: "2026 Summer School"
-  label: "Application now open"
+  title: "2026 暑期学校"
+  label: "报名开放中"
   url: "/events/summer-schools/2026/"
-  summary: "NIL Summer School 2026: The Power of Aesthetics will be held from August 22 to 30, 2026 at Shanghai International Studies University."
+  summary: "NIL 2026 暑期学校“美学的力量”将于 2026 年 8 月 22 日至 30 日在上海外国语大学举办。"
 
 event_series:
-  - title: "Conferences"
+  - title: "会议"
     url: "/events/conferences/"
-    summary: "Conference programs, preparation notices, and conference archives."
-  - title: "Summer Schools"
+    summary: "NIL 会议项目、筹备信息和往届会议归档。"
+  - title: "暑期学校"
     url: "/events/summer-schools/"
-    summary: "Summer school recruitment, programs, and past school archives."
-  - title: "Reports & Talks"
-    url: "/events/reports-talks/"
-    summary: "Reports, talks, lectures, and academic exchange activities."
+    summary: "暑期学校与秋季学校项目、招募信息和往届回顾。"
   - title: "Lab News"
     url: "/news/"
-    summary: "Lab news and updates."
+    summary: "NIL 新闻、报告、讲座与公告归档。"
 
 past_events:
   - title: "NIL Conference 2025"
     url: "/events/conferences/2025/"
-    summary: "Past conference recap and materials."
+    summary: "往届会议回顾与资料。"
   - title: "2025 Autumn School"
     url: "/events/summer-schools/2025-autumn/"
-    summary: "Past autumn school recap and materials."
+    summary: "2025 秋季学校回顾与资料。"
   - title: "2024 Summer School"
     url: "/events/summer-schools/2024/"
-    summary: "Past summer school recap and materials."
+    summary: "2024 暑期学校回顾与资料。"
 
-latest_news:
-  - title: "Lab News"
-    url: "/news/"
-    summary: "Read the latest NIL lab news."
 ---

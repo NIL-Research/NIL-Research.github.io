@@ -16,16 +16,8 @@ mainCards_text: |
   - Applicants are expected to maintain a rigorous and honest academic attitude, uphold a strict scientific approach, and demonstrate strong teamwork competence. Candidates should be capable of conducting interdisciplinary research that integrates psychology and neuroscience with visual art, aesthetics, linguistics, artificial intelligence, and related fields, and contribute to the development of the Laboratory.
 
   ### Research Areas
-
-  - Psychology
-  - Cognitive neuroscience
-  - Computational neuroscience
-  - Image science
-  - Neuroaesthetics
-  - Artificial intelligence
-  - Linguistics
-  - Art and aesthetics
-  - Human-computer interaction
+  
+  Psychology, Cognitive neuroscience, Computational neuroscience, Image science, Neuroaesthetics, Artificial intelligence, Linguistics, Art and aesthetics, Human-computer interaction
 
   ## Visiting Scholars
 
