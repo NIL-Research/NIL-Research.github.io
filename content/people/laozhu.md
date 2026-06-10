@@ -1,13 +1,11 @@
 ---
-title: "Lao Zhu"
+title: "LaoZhu (Qingsheng ZHU)"
 user_groups:
-photo: "/images/photo/laozhu.jpg"
+photo: "/images/people/LaoZhu_Qingsheng_ZHU.jpeg"
 role: "Professor, Founding Member"
-department: 
-    - NIL
-    - SISU
+department:
+  - World Arthistory Institute
+  - Shanghai International Studies University
 ---
 
-Art historian, art critic and artist. PhD from University of Heidelberg. Corresponding Academician of the German Institute of Archaeology. Professor of History Department of Peking University. Chief Expert of Image Lab at Peking University. Director of the World Arthistory Institute (WAI) at Shanghai International Studies University (SISU). President of the International Committee for Art History (CIHA) from 2016 to 2021.
-
-His areas of research concern the concept of art history, which is different from Western art history, as well as image studies that are unrelated to thing as a core methodology of art history.
+LaoZhu（Qingsheng ZHU）教授是艺术史学者、艺术批评家和艺术家，曾在海德堡接受博士训练，并与德国考古研究院、北京大学和上海外国语大学等机构开展长期学术工作。他的研究关注中国视觉传统中的艺术史概念与图像研究方法，并尝试突破以西方艺术史为中心的既有框架。

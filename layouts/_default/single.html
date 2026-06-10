@@ -27,7 +27,9 @@
   {{ if .Params.miniCards }}
   <section class="section">
     <div class="section-container">
-      <h2 class="section-title">{{ .Params.miniCards_title }}</h2>
+      {{ with .Params.miniCards_title }}
+      <h2 class="section-title">{{ . }}</h2>
+      {{ end }}
 
       {{ with .Params.miniCards_text }}
       <div class="section-intro">

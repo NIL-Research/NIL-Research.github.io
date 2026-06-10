@@ -1,0 +1,16 @@
+{{ with .items }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="maincards-images">
+      {{ range . }}
+        {{ if .image }}
+          <img src="{{ .image | relURL }}" alt="{{ .alt | default "Event photo" }}" class="maincards-image">
+        {{ else }}
+          <div class="section-intro">待更新。</div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

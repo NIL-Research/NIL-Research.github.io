@@ -1,0 +1,15 @@
+{{- $currentLang := .Site.Language.Lang -}}
+{{- $targetLang := cond (eq $currentLang "en") "zh" "en" -}}
+{{- $targetLabel := cond (eq $targetLang "en") "EN" "中文" -}}
+{{- $targetHTMLLang := cond (eq $targetLang "en") "en" "zh-Hans" -}}
+{{- $targetPage := false -}}
+{{- range .Translations -}}
+    {{- if eq .Language.Lang $targetLang -}}
+        {{- $targetPage = . -}}
+    {{- end -}}
+{{- end -}}
+{{- with $targetPage -}}
+    <div class="language-switcher">
+        <a href="{{ .RelPermalink }}" lang="{{ $targetHTMLLang }}" hreflang="{{ $targetHTMLLang }}" aria-label="Switch language to {{ $targetLabel }}">{{ $targetLabel }}</a>
+    </div>
+{{- end -}}

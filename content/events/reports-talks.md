@@ -9,7 +9,7 @@ news_summary: "Reports, academic talks, public lectures, and related exchange ac
 
 mainCards_title: "Reports & Talks"
 mainCards_text: |
-  Current reports, talks, public lectures, and academic exchange activities will be listed here.
+  Reports, talks, public lectures, and academic exchange activities will be listed here.
 
-  Previous reports and talks can be organized under `content/events/reports-talks/` in the future.
+  Detailed archives can be added in a future round.
 ---

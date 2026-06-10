@@ -1,0 +1,8 @@
+<div class="mini-card">
+  <div class="mini-card-content">
+    <h3 class="mini-card-title">{{ .title | default "待更新" }}</h3>
+    {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
+    {{ with .status }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
+    {{ with .summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
+  </div>
+</div>

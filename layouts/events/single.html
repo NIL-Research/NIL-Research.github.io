@@ -1,0 +1,137 @@
+{{ define "main" }}
+{{ $dataPath := split (.Params.event_data | default "") "/" }}
+{{ $event := dict }}
+{{ if eq (len $dataPath) 2 }}
+  {{ $group := index $dataPath 0 }}
+  {{ $key := index $dataPath 1 }}
+  {{ with index site.Data.events $group }}
+    {{ with index . $key }}
+      {{ $event = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $hero := .Params.hero }}
+{{ if not $hero }}
+  {{ $hero = $event.hero }}
+{{ end }}
+
+<section class="section">
+  <div class="section-container event-detail event-detail-panel">
+    {{ with $hero }}
+      {{ with .label }}<p class="eyebrow event-detail-eyebrow">{{ . }}</p>{{ end }}
+      <h1 class="section-title event-detail-title">{{ .title | default $.Title }}</h1>
+      {{ with .summary }}<div class="section-intro event-detail-summary">{{ . | markdownify }}</div>{{ end }}
+    {{ else }}
+      <p class="eyebrow event-detail-eyebrow">{{ $event.event_type | default .Params.event_category | default "Event" }}</p>
+      <h1 class="section-title event-detail-title">{{ .Title }}</h1>
+      {{ with $event.summary }}<div class="section-intro event-detail-summary">{{ . | markdownify }}</div>{{ end }}
+    {{ end }}
+
+    {{ if .Content }}
+      <div class="event-detail-body">
+        {{ .Content }}
+      </div>
+    {{ else if $event.sections }}
+      <div class="event-detail-body">
+      {{ range $event.sections }}
+        <section class="event-detail-section">
+          <h2>{{ .title }}</h2>
+          {{ with .summary }}<p>{{ . }}</p>{{ end }}
+          {{ with .items }}
+            <ul>
+              {{ range . }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </section>
+      {{ end }}
+      </div>
+    {{ else }}
+      <div class="event-detail-body">
+      <section class="event-detail-section">
+        <h2>Overview</h2>
+        {{ with $event.summary }}<p>{{ . }}</p>{{ else }}{{ .Content }}{{ end }}
+      </section>
+
+      {{ if eq ($event.status | default "") "upcoming" }}
+        <section class="event-detail-section">
+          <h2>Date & Venue</h2>
+          <p>{{ $event.start_date | default "[To be confirmed]" }}{{ with $event.end_date }} - {{ . }}{{ end }}</p>
+          <p>{{ $event.location | default "[To be confirmed]" }}</p>
+        </section>
+        <section class="event-detail-section">
+          <h2>Registration</h2>
+          {{ with $event.registration_url }}<p><a href="{{ . }}">Registration</a></p>{{ else }}<p>[To be confirmed]</p>{{ end }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Program / Agenda</h2>
+          {{ partial "events/schedule.html" (dict "title" "Program / Agenda" "items" $event.schedule) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Speakers</h2>
+          {{ partial "events/speakers.html" (dict "title" "Speakers" "items" $event.speakers) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Important Dates</h2>
+          {{ partial "events/important-dates.html" (dict "title" "Important Dates" "items" $event.important_dates) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>FAQ</h2>
+          {{ partial "events/faq.html" (dict "title" "FAQ" "items" $event.faq) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Contact</h2>
+          <p>{{ $event.contact | default "[To be confirmed]" }}</p>
+        </section>
+      {{ else }}
+        <section class="event-detail-section">
+          <h2>Agenda</h2>
+          {{ partial "events/schedule.html" (dict "title" "Agenda" "items" $event.schedule) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Highlights / Summary</h2>
+          {{ with $event.highlights }}
+            <ul>
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ else }}
+            <p>[To be confirmed]</p>
+          {{ end }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Speakers</h2>
+          {{ partial "events/speakers.html" (dict "title" "Speakers" "items" $event.speakers) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Downloads</h2>
+          {{ partial "events/downloads.html" (dict "title" "Downloads" "items" $event.downloads) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Photos</h2>
+          {{ partial "events/gallery.html" (dict "title" "Photos" "items" $event.gallery) }}
+        </section>
+        <section class="event-detail-section">
+          <h2>Related News</h2>
+          {{ with $event.related_news }}
+            <ul>
+              {{ range . }}
+                <li>
+                  {{ if .url }}
+                    <a href="{{ .url | relURL }}">{{ .title | default .url }}</a>
+                  {{ else }}
+                    {{ .title | default . }}
+                  {{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          {{ else }}
+            <p>[To be confirmed]</p>
+          {{ end }}
+        </section>
+      {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -47,7 +47,7 @@
                 </div>
               {{ else }}
                 <div class="mini-card-image">
-                  <img src="/images/default-avatar.png" alt="{{ $card.Title }}">
+                  <img src="{{ "/images/people/default-avatar.png" | relURL }}" alt="{{ $card.Title }}">
                 </div>
               {{ end }}
               <div class="mini-card-content">
@@ -63,6 +63,23 @@
           {{ end }}
         </div>
       {{ end }}
+    {{ end }}
+
+    {{ with .Params.footerCards }}
+      <div class="people-footer-section">
+        <h2 class="section-title">Founding Members</h2>
+        <div class="mini-cards-grid people-footer-cards">
+        {{ range . }}
+          <a href="{{ .url | relURL }}" class="mini-card">
+            <div class="mini-card-content">
+              {{ with .summary }}
+                <div class="mini-card-summary">{{ . | markdownify }}</div>
+              {{ end }}
+            </div>
+          </a>
+        {{ end }}
+        </div>
+      </div>
     {{ end }}
 
   </div>

@@ -1,0 +1,118 @@
+{{- $dir := .Get "dir" | default "gallery" -}}
+{{- $pattern := printf "%s/*" $dir -}}
+{{- $images := .Page.Resources.Match $pattern -}}
+{{- if eq (len $images) 0 -}}
+  {{- $fallbackPath := replaceRE "^/[a-z]{2}(-[a-z]+)?/" "/" .Page.RelPermalink -}}
+  {{- $scratch := newScratch -}}
+  {{- range site.Sites -}}
+    {{- if not ($scratch.Get "images") -}}
+      {{- with .GetPage $fallbackPath -}}
+        {{- $fallbackImages := .Resources.Match $pattern -}}
+        {{- if gt (len $fallbackImages) 0 -}}
+          {{- $scratch.Set "images" $fallbackImages -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $scratch.Get "images" -}}
+    {{- $images = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $validExt := slice ".jpg" ".jpeg" ".png" ".webp" ".gif" -}}
+{{- $count := 0 -}}
+{{- range sort $images "Name" -}}
+  {{- if in $validExt (lower (path.Ext .Name)) -}}
+    {{- $count = add $count 1 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt $count 0 -}}
+  {{- $id := printf "event-carousel-%d" .Ordinal -}}
+  <div class="event-carousel" aria-label="Event photo carousel">
+    <button class="event-carousel-button event-carousel-button-prev" type="button" aria-label="Previous image" onclick="document.getElementById('{{ $id }}').scrollBy({ left: -Math.max(320, document.getElementById('{{ $id }}').clientWidth * 0.9), behavior: 'smooth' });">&#8249;</button>
+    <div id="{{ $id }}" class="event-carousel-track">
+      {{- range sort $images "Name" -}}
+        {{- if in $validExt (lower (path.Ext .Name)) -}}
+          <figure class="event-carousel-slide">
+            <img src="{{ .RelPermalink }}" alt="{{ replaceRE `[-_]` ` ` (path.BaseName .Name) | title }}" loading="lazy">
+          </figure>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    <button class="event-carousel-button event-carousel-button-next" type="button" aria-label="Next image" onclick="document.getElementById('{{ $id }}').scrollBy({ left: Math.max(320, document.getElementById('{{ $id }}').clientWidth * 0.9), behavior: 'smooth' });">&#8250;</button>
+  </div>
+
+  <style>
+    .event-carousel {
+      position: relative;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .event-carousel-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0 6px 12px;
+      scrollbar-width: thin;
+    }
+
+    .event-carousel-slide {
+      flex: 0 0 min(100%, 920px);
+      margin: 0;
+      scroll-snap-align: center;
+    }
+
+    .event-carousel-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 620px;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      background: #f6f8f9;
+    }
+
+    .event-carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(0, 84, 126, 0.9);
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 38px;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    .event-carousel-button-prev {
+      left: 8px;
+    }
+
+    .event-carousel-button-next {
+      right: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .event-carousel-track {
+        gap: 12px;
+        padding-bottom: 10px;
+      }
+
+      .event-carousel-button {
+        width: 34px;
+        height: 34px;
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+  </style>
+{{- end -}}
