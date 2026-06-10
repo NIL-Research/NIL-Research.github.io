@@ -118,47 +118,49 @@
   <!-- Dynamic News list with BigCards fallback -->
   {{ if eq .Section "news" }}
     {{ $newsPages := where (where .Site.RegularPages "Section" "news") "Params.exclude_from_news" "ne" true }}
-    {{ $eventPages := where (where .Site.RegularPages "Section" "events") "Params.show_in_news" true }}
-    {{ $newsItems := sort (union $newsPages $eventPages) "Title" }}
-    {{ if gt (len $newsItems) 0 }}
-      {{ $renderedDynamicNews = true }}
-      <section class="section">
-        <div class="section-container">
-          <h2 class="section-title">{{ .Params.BigCards_title | default .Title }}</h2>
-
-          {{ with .Params.BigCards_text }}
-          <div class="section-intro">
-            {{ . | markdownify }}
-          </div>
-          {{ end }}
-
-          <div class="mini-cards-grid">
-            {{ range $newsItems }}
-              {{ $title := .Params.news_title | default .Title }}
-              {{ $summary := .Params.news_summary | default .Summary }}
-              {{ $image := or .Params.news_image .Params.image .Params.photo }}
-              <a href="{{ .RelPermalink }}" class="mini-card">
-                {{ with $image }}
-                  <div class="mini-card-image">
-                    <img src="{{ . | relURL }}" alt="{{ $title }}">
-                  </div>
-                {{ end }}
-                <div class="mini-card-content">
-                  <h3 class="mini-card-title">{{ $title }}</h3>
-                  {{ with .Params.event_category }}
-                    <div class="mini-card-subtitle">{{ . }}</div>
-                  {{ end }}
-                  {{ with $summary }}
-                    <div class="mini-card-summary">{{ . | markdownify }}</div>
-                  {{ end }}
-                </div>
-              </a>
-            {{ end }}
-          </div>
-        </div>
-      </section>
+    {{ $newsItems := sort $newsPages "Date" "desc" }}
+    {{ $emptyNewsText := "Latest news will be updated soon." }}
+    {{ if eq .Site.Language.Lang "zh" }}
+      {{ $emptyNewsText = "最新动态将陆续更新。" }}
     {{ end }}
-  {{ end }}
+    {{ $renderedDynamicNews = true }}
+    <section class="section">
+      <div class="section-container">
+        <h2 class="section-title">{{ .Params.BigCards_title | default .Title }}</h2>
+
+        {{ with .Params.BigCards_text }}
+        <div class="section-intro">
+          {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+    {{ if gt (len $newsItems) 0 }}
+        <div class="mini-cards-grid">
+          {{ range $newsItems }}
+            {{ $title := .Params.news_title | default .Title }}
+            {{ $summary := .Params.news_summary | default .Summary }}
+            {{ $image := or .Params.news_image .Params.image .Params.photo }}
+            <a href="{{ .RelPermalink }}" class="mini-card">
+              {{ with $image }}
+                <div class="mini-card-image">
+                  <img src="{{ . | relURL }}" alt="{{ $title }}">
+                </div>
+              {{ end }}
+              <div class="mini-card-content">
+                <h3 class="mini-card-title">{{ $title }}</h3>
+                {{ with $summary }}
+                  <div class="mini-card-summary">{{ . | markdownify }}</div>
+                {{ end }}
+              </div>
+            </a>
+            {{ end }}
+        </div>
+      {{ else }}
+        <div class="section-intro">{{ $emptyNewsText }}</div>
+      {{ end }}
+      </div>
+    </section>
+    {{ end }}
 
   <!-- BigCards -->
   {{ if and .Params.BigCards (not $renderedDynamicNews) }}

@@ -94,11 +94,6 @@ main:
     parent: news-events
     url: /events/summer-schools/
     weight: 3
-  - name: Reports & Talks
-    parent: news-events
-    url: /events/reports-talks/
-    weight: 4
-
   - name: Contact
     url: /contacts/
     weight: 60

@@ -1,6 +1,7 @@
 ---
 title: "Reports & Talks"
 type: content
+draft: true
 event_category: "reports-talks"
 current_event: true
 show_in_news: false
