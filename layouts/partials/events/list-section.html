@@ -1,0 +1,14 @@
+{{ with .items }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="section-intro">
+      <ul>
+        {{ range . }}
+          <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}

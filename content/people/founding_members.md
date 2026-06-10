@@ -8,16 +8,16 @@ miniCards_text:
 miniCards:
   - title: "Yan Bao"
     url: /people/yanbao
-    image: "/images/photo/baoyan.jpg"
+    image: "/images/people/baoyan.jpg"
     subtitle: 
     summary: | 
         Director of NIL, SISU
 
         Professor Emerita,  PKU
 
-  - title: "Nikos Logothetis"
+  - title: "Nikos LOGOTHETIS"
     url: /people/nikoslogothetis
-    image: "/images/photo/nikoslogothetis.jpg"
+    image: "/images/people/Nikos_LOGOTHETIS.jpeg"
     subtitle: 
     summary: | 
         Director of CEBSIT, 
@@ -27,7 +27,7 @@ miniCards:
 
   - title: "Ernst Pöppel"
     url: /people/poeppel
-    image: "/images/photo/ErnstPöppel.jpg"
+    image: "/images/people/ErnstPöppel.jpg"
     subtitle: 
     summary: | 
         Director of NIL, SISU
@@ -37,7 +37,7 @@ miniCards:
 
   - title: "Lao Zhu"
     url: /people/laozhu
-    image: "/images/photo/LaoZhu.jpg"
+    image: "/images/people/LaoZhu_Qingsheng_ZHU.jpeg"
     subtitle: 
     summary: | 
         Director of WAI, SISU

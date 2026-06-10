@@ -3,7 +3,7 @@ title: "Ernst Pöppel"
 type: "people"
 
 user_groups: ["PI"]
-photo: "/images/photo/Poeppel.jpg"
+photo: "/images/people/Poeppel.jpg"
 role: "Professor, Director"
 department: 
     - NIL

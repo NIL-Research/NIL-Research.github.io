@@ -1,14 +1,12 @@
 ---
 title: "Helmut Leder"
 type: "people"
-
-user_groups: ["Visiting Scholar"]
-photo: "/images/photo/default-avatar.png"
+user_groups: ["Researcher"]
+photo: "/images/people/Helmut Leder.jpg"
 role: "Professor"
 order: 60
 department:
-  - "University of Vienna"
-  - "Department of Cognition, Emotion, and Methods in Psychology"
-email: "helmut.leder@univie.ac.at"
+  - "Vienna University, Austria"
 ---
-Helmut Leder is Professor of Empirical Visual Aesthetics at the University of Vienna. His research examines human aesthetic experience across art, design, faces, and other visual objects, using methods ranging from laboratory studies to field studies.
+
+Helmut Leder 教授任职于 University of Vienna 心理学院 Department of Psychology of Cognition, Emotion and Methods。他曾担任系主任和 Cognitive Science Research Hub 负责人，并于 2014 至 2018 年担任 International Association of Empirical Aesthetics 主席。其研究聚焦经验美学、审美心理学、艺术感知和认知科学。

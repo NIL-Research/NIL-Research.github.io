@@ -1,0 +1,8 @@
+{{ with .content }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="section-intro">{{ . | markdownify }}</div>
+  </div>
+</section>
+{{ end }}

@@ -42,7 +42,7 @@ main:
 
   - name: People
     identifier: people
-    url: /people/founding_members/
+    url: /people/
     weight: 30
   - name: Founding Members
     parent: people
@@ -55,28 +55,32 @@ main:
 
   - name: Opportunities
     identifier: opportunities
-    url: /people/open_positions/
+    url: /opportunities/
     weight: 40
-  - name: Open Positions
+  - name: Research Positions
     parent: opportunities
-    url: /people/open_positions/
+    url: /opportunities/research-positions/
     weight: 1
   - name: Graduate Admission
     parent: opportunities
     url: /opportunities/graduate-admission/
     weight: 2
-  - name: Summer School Recruitment
+  - name: Undergraduate Research
     parent: opportunities
-    url: /opportunities/summer-school-recruitment/
+    url: /opportunities/undergraduate-research/
     weight: 3
   - name: Visiting Students
     parent: opportunities
     url: /opportunities/visiting-students/
     weight: 4
+  - name: Summer School
+    parent: opportunities
+    url: /events/summer-schools/
+    weight: 5
 
   - name: News & Events
     identifier: news-events
-    url: /news/
+    url: /events/
     weight: 50
   - name: Lab News
     parent: news-events

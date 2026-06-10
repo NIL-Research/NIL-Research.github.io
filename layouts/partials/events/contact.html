@@ -1,0 +1,11 @@
+{{ with .contact }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="section-intro">
+      <p>{{ .name | default "待更新" }}</p>
+      {{ with .email }}<p><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

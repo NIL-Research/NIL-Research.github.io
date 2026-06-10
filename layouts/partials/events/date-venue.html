@@ -1,0 +1,11 @@
+{{ with .event }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="section-intro">
+      <p><strong>Date:</strong> {{ .start_date | default "待更新" }}{{ with .end_date }} - {{ . }}{{ end }}</p>
+      <p><strong>Venue:</strong> {{ .location | default "待更新" }}</p>
+    </div>
+  </div>
+</section>
+{{ end }}

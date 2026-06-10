@@ -1,7 +1,7 @@
 ---
-title: "Yan BAO"
+title: "包燕"
 user_groups: ["PI"]
-photo: "/images/photo/baoyan.jpg"
+photo: "/images/people/baoyan.jpg"
 role: "Professor, Director"
 department: 
     - NIL

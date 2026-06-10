@@ -1,0 +1,18 @@
+{{ with .items }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="mini-cards-grid">
+      {{ range . }}
+        <div class="mini-card">
+          <div class="mini-card-content">
+            <h3 class="mini-card-title">{{ .name | default "待更新" }}</h3>
+            {{ with .affiliation }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
+            {{ with .topic }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

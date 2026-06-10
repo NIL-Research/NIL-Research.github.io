@@ -1,0 +1,14 @@
+{{ with .items }}
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">{{ $.title }}</h2>
+    <div class="section-intro">
+      <ul>
+        {{ range . }}
+          <li>{{ .date | default "待更新" }}: {{ .title | default "待更新" }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}
