@@ -1,5 +1,5 @@
 ---
-title: "NIL Conference 2025"
+title: "2025 Conference"
 type: "conference"
 
 # === Hero Section ===
@@ -11,19 +11,19 @@ hero_location: "Shanghai International Studies University, Shanghai, China"
 # === Institutions / Partners ===
 # institutions:
 #   - "Shanghai International Studies University (SISU)"
-#   - "Neurocognitive Image Lab (NIL)"
+#   - "Neurocognitive Image Laboratory (NIL)"
 #   - "International Collaborating Institutions"
 
 # === Organizers ===
 organizers:
-  - "Neurocognitive Image Lab (NIL), SISU"
+  - "Neurocognitive Image Laboratory (NIL), SISU"
   - "World Arthistory Institute (WAI), SISU"
   - "Institute of Language Sciences (ILS), SISU"
   - Office of International Cooperation and Exchange (OICE),SISU
 
 # === Welcome Message ===
 welcome:
-  - "Welcome to the NIL Conference 2025, where leading researchers and artists gather to explore the intersection of neuroscience, cognition, and aesthetic experience."
+  - "Welcome to the 2025 Conference, where leading researchers and artists gather to explore the intersection of neuroscience, cognition, and aesthetic experience."
   - "This conference aims to foster cross-cultural collaboration and innovative research in cognitive neuroscience and the arts."
 
 # === Conference Schedule ===
@@ -39,7 +39,7 @@ schedule_pdf: "/uploads/NIL_Conference_2025_Schedule.pdf"
 #     talk_title: "Computational Models of Aesthetic Experience"
 #     talk_abstract: "Exploring how computational models can predict and explain human aesthetic perception."
 #   - name: "Dr. Li Wei"
-#     affiliation: "Neurocognitive Image Lab, SISU"
+#     affiliation: "Neurocognitive Image Laboratory, SISU"
 #     photo: "/images/speakers/li-wei.jpg"
 #     bio: "Dr. Li specializes in cross-cultural studies of perception and neural mechanisms underlying art appreciation."
 #     talk_title: "Cross-Cultural Neural Responses to Art"

@@ -4,7 +4,7 @@ type: content
 unified_panel: true
 mainCards_title: "Opportunities at NIL"
 mainCards_text: |
-  The Neurocognitive Image Lab (NIL) welcomes researchers, students, and visiting scholars who are interested in interdisciplinary research on image, brain, aesthetics, cognition, artificial intelligence, and human-computer interaction.
+  The Neurocognitive Image Laboratory (NIL) welcomes researchers, students, and visiting scholars who are interested in interdisciplinary research on image, brain, aesthetics, cognition, artificial intelligence, and human-computer interaction.
 
   NIL provides an international and cross-disciplinary research environment. We encourage applicants from psychology, neuroscience, cognitive science, computer science, artificial intelligence, linguistics, art history, aesthetics, philosophy, design, and related fields to contact us.
 

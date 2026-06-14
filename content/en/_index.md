@@ -1,4 +1,4 @@
 ---
 title: "NIL"
-subtitle: "Neurocognitive Image Lab"
+subtitle: "Neurocognitive Image Laboratory"
 ---

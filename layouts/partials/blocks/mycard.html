@@ -2,7 +2,7 @@
 <div class="mycard-container">
   {{ range .wcBlock.content.items }}
   {{ if .url }}
-  <a href="{{ .url }}" class="mycard-card">
+  <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mycard-card">
   {{ else }}
   <div class="mycard-card">
   {{ end }}

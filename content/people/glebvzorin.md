@@ -7,13 +7,13 @@ role: "Postdoctoral Researcher"
 position: ""
 order: 100
 department:
-  - "Neurocognitive Image Lab, Shanghai International Studies University"
+  - "Neurocognitive Image Laboratory, Shanghai International Studies University"
   - "Lomonosov Moscow State University"
 email: "vzorin.g@gmail.com"
 website: ""
 ---
 
-Dr. Gleb Vzorin is an ongoing postdoctoral researcher at the Neurocognitive Image Lab,
+Dr. Gleb Vzorin is an ongoing postdoctoral researcher at the Neurocognitive Image Laboratory,
 Shanghai International Studies University (SISU), and a research scientist at the Institute of
 Psychology, Russian Academy of Sciences. He earned his PhD at the Russian Academy of
 Sciences under the supervision of Prof. D. Ushakov, focusing on the impact of digital

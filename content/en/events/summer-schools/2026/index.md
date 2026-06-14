@@ -1,5 +1,5 @@
 ---
-title: "NIL Summer School 2026: The Power of Aesthetics"
+title: "2026 Summer School: The Power of Aesthetics"
 type: events
 event_category: "summer-schools"
 event_data: "summer-schools/2026"
@@ -7,7 +7,7 @@ show_in_news: true
 news_summary: "Applications are now open for the SISU-LMU-VDW 2026 Summer School, an international and interdisciplinary program on aesthetics, neuroaesthetics, cognition, and creativity."
 hero:
   label: "Application now open"
-  title: "NIL Summer School 2026: The Power of Aesthetics"
+  title: "2026 Summer School: The Power of Aesthetics"
   summary: "The SISU-LMU-VDW 2026 Summer School will be held from August 22 to 30, 2026 at Shanghai International Studies University, Shanghai."
 ---
 

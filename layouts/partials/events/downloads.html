@@ -6,7 +6,7 @@
       <ul>
         {{ range . }}
           <li>
-            {{ if .url }}<a href="{{ .url | relURL }}">{{ .title | default "待更新" }}</a>{{ else }}{{ .title | default "待更新" }}{{ end }}
+            {{ if .url }}<a href="{{ partial "lang-link.html" (dict "url" .url) }}">{{ .title | default "待更新" }}</a>{{ else }}{{ .title | default "待更新" }}{{ end }}
           </li>
         {{ end }}
       </ul>

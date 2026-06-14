@@ -1,12 +1,12 @@
 ---
-title: "NIL 2025 秋季学校：可持续性与认知神经科学"
+title: "2025 秋季学校：可持续性与认知神经科学"
 type: events
 event_category: "summer-schools"
 event_data: "summer-schools/2025-autumn"
 show_in_news: false
 hero:
   label: "已举办"
-  title: "NIL 2025 秋季学校：可持续性与认知神经科学"
+  title: "2025 秋季学校：可持续性与认知神经科学"
   summary: "2025 年秋季学校“可持续性与认知神经科学：美学中的时间 / 时间的美学”于 2025 年 10 月 25 日至 11 月 16 日的周末在上海外国语大学举办。"
 ---
 

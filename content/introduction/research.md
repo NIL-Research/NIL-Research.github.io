@@ -4,7 +4,7 @@ type: content
 
 mainCards_title: "NIL Research "
 mainCards_text: | 
-        The Neurocognitive Image Lab (NIL) plans to conduct interdisciplinary research across the sciences of image, brain, and aesthetics, exploring how humans perceive, experience, and create meaning through images. The research frame of NIL includes five interlinked and mutually reinforcing domains: 
+        The Neurocognitive Image Laboratory (NIL) plans to conduct interdisciplinary research across the sciences of image, brain, and aesthetics, exploring how humans perceive, experience, and create meaning through images. The research frame of NIL includes five interlinked and mutually reinforcing domains: 
 
         ## Image Science
         Encompasses visual perception, cognitive processing, image representation, and computational modeling. It investigates how both humans and intelligent systems perceive, interpret, and communicate images, forming the scientific foundation of visual cognition and communication

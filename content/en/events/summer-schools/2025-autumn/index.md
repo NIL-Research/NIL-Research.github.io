@@ -1,12 +1,12 @@
 ---
-title: "NIL Autumn School 2025: Sustainability and Cognitive Neuroscience"
+title: "2025 Autumn School: Sustainability and Cognitive Neuroscience"
 type: events
 event_category: "summer-schools"
 event_data: "summer-schools/2025-autumn"
 show_in_news: false
 hero:
   label: "Past event"
-  title: "NIL Autumn School 2025: Sustainability and Cognitive Neuroscience"
+  title: "2025 Autumn School: Sustainability and Cognitive Neuroscience"
   summary: "The 2025 Autumn School was held on weekends from October 25 to November 16, 2025 at Shanghai International Studies University."
 ---
 
@@ -22,7 +22,7 @@ The program featured internationally recognized scholars as instructors and ment
 
 The Autumn School was organized by:
 
-- Neurocognitive Image Lab (NIL), SISU
+- Neurocognitive Image Laboratory (NIL), SISU
 - World Art History Institute (WAI), SISU
 - Federation of German Scientists (VDW)
 - Institute of Medical Psychology (IMP), Ludwig Maximilian University of Munich (LMU)

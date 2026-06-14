@@ -1,5 +1,5 @@
 ---
-title: "NIL Conference 2026"
+title: "2026 Conference"
 draft: true
 type: events
 event_category: "conferences"
@@ -11,4 +11,4 @@ build:
   publishResources: false
 ---
 
-NIL Conference 2026 is currently under preparation. Further information will be announced once available.
+2026 Conference is currently under preparation. Further information will be announced once available.

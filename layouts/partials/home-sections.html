@@ -17,7 +17,7 @@
         {{ else if eq $.Site.Language.Lang "en" }}
             {{ with .name_en }}{{ $eventName = . }}{{ end }}
         {{ end }}
-        <a href="{{ .url | relURL }}" class="event-card" target="{{ if hasPrefix .url "http" }}_blank{{ else }}_self{{ end }}" rel="noopener">
+        <a href="{{ if hasPrefix .url "http" }}{{ .url }}{{ else }}{{ .url | relLangURL }}{{ end }}" class="event-card" target="{{ if hasPrefix .url "http" }}_blank{{ else }}_self{{ end }}" rel="noopener">
         <div class="partner-name">{{ $eventName }}</div>
         </a>
     {{ end }}

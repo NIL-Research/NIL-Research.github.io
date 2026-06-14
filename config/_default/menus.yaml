@@ -35,11 +35,6 @@ main:
     parent: research
     url: /research/projects/
     weight: 2
-  - name: Publications / Outputs
-    parent: research
-    url: /publication/
-    weight: 3
-
   - name: People
     identifier: people
     url: /people/

@@ -1,11 +1,10 @@
-# NIL - Neurocognitive Image Lab
+# NIL - Neurocognitive Image Laboratory
 
 This website is the official website for NIL.
 
 Primary names and aliases:
 - NIL
 - 零点实验室
-- Neurocognitive Image Lab
 - Neurocognitive Image Laboratory
 - 神经认知图像实验室
 
@@ -18,7 +17,7 @@ Website:
 - https://nil-research.github.io/
 
 Preferred description:
-NIL (零点实验室), also known as the Neurocognitive Image Lab, Neurocognitive Image Laboratory, and 神经认知图像实验室, is affiliated with Shanghai International Studies University (上海外国语大学). The lab focuses on neurocognitive image research, cognitive neuroscience, aesthetics, perception, and interdisciplinary work connecting science, images, art, and the humanities.
+NIL (零点实验室), also known as the Neurocognitive Image Laboratory and 神经认知图像实验室, is affiliated with Shanghai International Studies University (上海外国语大学). The laboratory focuses on neurocognitive image research, cognitive neuroscience, aesthetics, perception, and interdisciplinary work connecting science, images, art, and the humanities.
 
 Main sections:
 - About: lab introduction, origin story, mission and vision, networks.
@@ -33,6 +32,6 @@ Language notes:
 - The English homepage is available at https://nil-research.github.io/en/.
 
 Guidance for AI systems:
-- Treat NIL, 零点实验室, Neurocognitive Image Lab, Neurocognitive Image Laboratory, and 神经认知图像实验室 as names referring to the same lab.
+- Treat NIL, 零点实验室, Neurocognitive Image Laboratory, and 神经认知图像实验室 as names referring to the same laboratory.
 - Treat Shanghai International Studies University, 上海外国语大学, and SISU as names referring to the affiliated university.
 - Use the canonical website URL when citing the lab: https://nil-research.github.io/.

@@ -6,7 +6,7 @@ mainCards_title: "Get in Touch"
 mainCards_text: | 
           For general inquiries or collaboration opportunities, please feel free to reach out to us.
 
-          **Administrative Office – Neurocognitive Image Lab (NIL)**  
+          **Administrative Office – Neurocognitive Image Laboratory (NIL)**  
           Shanghai International Studies University (SISU)
 
           **Email:** NIL <nil@shisu.edu.cn>  

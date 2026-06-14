@@ -26,7 +26,7 @@ event_series:
     summary: "NIL 新闻、报告、讲座与公告归档。"
 
 past_events:
-  - title: "NIL Conference 2025"
+  - title: "2025 Conference"
     url: "/events/conferences/2025/"
     summary: "往届会议回顾与资料。"
   - title: "2025 Autumn School"

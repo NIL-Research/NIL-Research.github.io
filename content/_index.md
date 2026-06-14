@@ -1,17 +1,17 @@
 ---
 title: "NIL"
-subtitle: "Neurocognitive Image Lab"
+subtitle: "Neurocognitive Image Laboratory"
 
 current_Events:
-        - name: Conference 2025 | 2025 国际会议
+        - name: 2025 Conference | 2025 国际会议
           url: "/conference/"
-        - name: Autumn School 2025 | 2025 秋季学校
+        - name: 2025 Autumn School | 2025 秋季学校
           url: "/news/autumn2025/"
         - name: Join Us | 加入我们
           url: "/people/open_positions"
 markCards_title: Remark
 markCards_text: |
-        At the Neurocognitive Image Lab (NIL), our mission is to bridge neuroscience, 
+        At the Neurocognitive Image Laboratory (NIL), our mission is to bridge neuroscience, 
         psychology, philosophy, and the arts. We aim to explore the neural foundations of image 
         perception, neuroaesthetics, and the temporal and spatial dynamics of cognition.
 

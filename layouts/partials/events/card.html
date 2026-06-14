@@ -1,5 +1,5 @@
 {{ if .url }}
-<a href="{{ .url | relURL }}" class="mini-card">
+<a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
   <div class="mini-card-content">
     <h3 class="mini-card-title">{{ .title | default "待更新" }}</h3>
     {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}

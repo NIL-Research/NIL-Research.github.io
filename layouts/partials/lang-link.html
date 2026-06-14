@@ -1,0 +1,8 @@
+{{- $url := .url | default "" -}}
+{{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") (hasPrefix $url "mailto:") (hasPrefix $url "tel:") (hasPrefix $url "#") -}}
+{{- $url -}}
+{{- else if or (hasPrefix $url "/en/") (hasPrefix $url "/zh/") -}}
+{{- $url | relURL -}}
+{{- else -}}
+{{- $url | relLangURL -}}
+{{- end -}}

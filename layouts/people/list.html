@@ -70,7 +70,7 @@
         <h2 class="section-title">Founding Members</h2>
         <div class="mini-cards-grid people-footer-cards">
         {{ range . }}
-          <a href="{{ .url | relURL }}" class="mini-card">
+          <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
             <div class="mini-card-content">
               {{ with .summary }}
                 <div class="mini-card-summary">{{ . | markdownify }}</div>

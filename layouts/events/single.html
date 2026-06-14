@@ -118,7 +118,7 @@
               {{ range . }}
                 <li>
                   {{ if .url }}
-                    <a href="{{ .url | relURL }}">{{ .title | default .url }}</a>
+                    <a href="{{ partial "lang-link.html" (dict "url" .url) }}">{{ .title | default .url }}</a>
                   {{ else }}
                     {{ .title | default . }}
                   {{ end }}

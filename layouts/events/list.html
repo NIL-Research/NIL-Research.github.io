@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $pastTitle := "Past Schools" }}
-{{ $newsURL := "/news/" | relURL }}
+{{ $newsURL := "/news/" | relLangURL }}
 {{ $emptyNewsText := "Latest news will be updated soon." }}
 {{ if eq .Site.Language.Lang "zh" }}
   {{ $emptyNewsText = "最新动态将陆续更新。" }}
@@ -26,7 +26,7 @@
     {{ with .Params.featured }}
     <h2 class="section-title">Featured</h2>
     <div class="mini-cards-grid">
-      <a href="{{ .url | relURL }}" class="mini-card">
+      <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
         <div class="mini-card-content">
           <h3 class="mini-card-title">{{ .title }}</h3>
           {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
@@ -40,7 +40,7 @@
     <h2 class="section-title">Event Series</h2>
     <div class="mini-cards-grid">
       {{ range . }}
-        <a href="{{ .url | relURL }}" class="mini-card">
+        <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
           <div class="mini-card-content">
             <h3 class="mini-card-title">{{ .title }}</h3>
             {{ with .summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
@@ -66,7 +66,7 @@
     {{ with .Params.recruiting_event }}
     <h2 class="section-title">Now Recruiting</h2>
     <div class="mini-cards-grid">
-      <a href="{{ .url | relURL }}" class="mini-card">
+      <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
         <div class="mini-card-content">
           <h3 class="mini-card-title">{{ .title }}</h3>
           {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
@@ -91,7 +91,7 @@
     <h2 class="section-title">{{ $pastTitle }}</h2>
     <div class="mini-cards-grid">
       {{ range . }}
-        <a href="{{ .url | relURL }}" class="mini-card">
+        <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
           <div class="mini-card-content">
             <h3 class="mini-card-title">{{ .title }}</h3>
             {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
@@ -148,7 +148,7 @@
   <div class="section-container">
     <h2 class="section-title">Featured</h2>
     <div class="mini-cards-grid">
-      <a href="{{ .url | relURL }}" class="mini-card">
+      <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
         <div class="mini-card-content">
           <h3 class="mini-card-title">{{ .title }}</h3>
           {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
@@ -166,7 +166,7 @@
     <h2 class="section-title">Event Series</h2>
     <div class="mini-cards-grid">
       {{ range . }}
-        <a href="{{ .url | relURL }}" class="mini-card">
+        <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
           <div class="mini-card-content">
             <h3 class="mini-card-title">{{ .title }}</h3>
             {{ with .summary }}<div class="mini-card-summary">{{ . | markdownify }}</div>{{ end }}
@@ -200,7 +200,7 @@
   <div class="section-container">
     <h2 class="section-title">Now Recruiting</h2>
     <div class="mini-cards-grid">
-      <a href="{{ .url | relURL }}" class="mini-card">
+      <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
         <div class="mini-card-content">
           <h3 class="mini-card-title">{{ .title }}</h3>
           {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}
@@ -233,7 +233,7 @@
     <h2 class="section-title">{{ $pastTitle }}</h2>
     <div class="mini-cards-grid">
       {{ range . }}
-        <a href="{{ .url | relURL }}" class="mini-card">
+        <a href="{{ partial "lang-link.html" (dict "url" .url) }}" class="mini-card">
           <div class="mini-card-content">
             <h3 class="mini-card-title">{{ .title }}</h3>
             {{ with .label }}<div class="mini-card-subtitle">{{ . }}</div>{{ end }}

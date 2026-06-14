@@ -4,7 +4,7 @@ type: content
 unified_panel: true
 mainCards_title: "加入 NIL"
 mainCards_text: |
-  上海外国语大学零点实验室（Neurocognitive Image Lab, NIL）欢迎有志于从事图像、脑、审美、认知、人工智能与人机交互等交叉研究的研究人员、学生和访问学者加入。
+  上海外国语大学零点实验室（Neurocognitive Image Laboratory, NIL）欢迎有志于从事图像、脑、审美、认知、人工智能与人机交互等交叉研究的研究人员、学生和访问学者加入。
 
   NIL 具有国际化和跨学科特色，欢迎来自心理学、神经科学、认知科学、计算机科学、人工智能、语言学、艺术史、美学、哲学、设计及相关领域的申请者与我们联系。
 

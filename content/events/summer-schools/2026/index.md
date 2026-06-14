@@ -1,5 +1,5 @@
 ---
-title: "NIL 2026 暑期学校：美学的力量"
+title: "2026 暑期学校：美学的力量"
 type: events
 event_category: "summer-schools"
 event_data: "summer-schools/2026"
@@ -7,7 +7,7 @@ show_in_news: true
 news_summary: "SISU-LMU-VDW 2026 暑期学校“美学的力量”现已开放报名。"
 hero:
   label: "现已开放报名"
-  title: "NIL 2026 暑期学校：美学的力量"
+  title: "2026 暑期学校：美学的力量"
   summary: "SISU-LMU-VDW 2026 暑期学校“美学的力量”将于 2026 年 8 月 22 日至 30 日在上海外国语大学举办。"
 ---
 

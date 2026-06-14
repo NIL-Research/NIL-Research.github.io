@@ -1,12 +1,12 @@
 ---
-title: "NIL 2024 暑期学校：美学的力量"
+title: "2024 暑期学校：美学的力量"
 type: events
 event_category: "summer-schools"
 event_data: "summer-schools/2024"
 show_in_news: false
 hero:
   label: "已举办"
-  title: "NIL 2024 暑期学校：美学的力量"
+  title: "2024 暑期学校：美学的力量"
   summary: "2024 年暑期学校“美学的力量”于 2024 年 8 月 24 日至 31 日在上海外国语大学松江校区举办。"
 ---
 

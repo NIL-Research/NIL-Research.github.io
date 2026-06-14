@@ -9,7 +9,7 @@ news_summary: "NIL 暑期学校、秋季学校与训练项目归档。"
 
 events_title: "暑期学校"
 events_text: |
-  NIL Summer Schools / Autumn School 是面向学生和青年研究者的国际跨学科训练项目。本页作为系列入口，汇总当前项目、往届回顾和相关资料。
+  Summer Schools / Autumn School 是面向学生和青年研究者的国际跨学科训练项目。本页作为系列入口，汇总当前项目、往届回顾和相关资料。
 
 recruiting_event:
   title: "2026 暑期学校"

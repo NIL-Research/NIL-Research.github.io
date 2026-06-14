@@ -1,7 +1,7 @@
 ---
 title: "Autumn 2025"
 type: content
-news_title: "Autumn School 2025"
+news_title: "2025 Autumn School"
 news_summary: "Sustainability and Cognitive Neuroscience: Time in Aesthetics / Aesthetics of Time."
 news_image: "/images/autumnschool.png"
 
@@ -13,7 +13,7 @@ miniCards_text: |
     ## Sustainability and Cognitive Neuroscience:
     ## Time in Aesthetics / Aesthetics of Time 
 
-    To promote in-depth collaboration between our university and top international institutions in the field of cognitive neuroscience, providing students with interdisciplinary and cross-cultural exchange opportunities, SISU will host the Autumn School 2025 in October 2025. 
+    To promote in-depth collaboration between our university and top international institutions in the field of cognitive neuroscience, providing students with interdisciplinary and cross-cultural exchange opportunities, SISU will host the 2025 Autumn School in October 2025. 
 
     The general theme of the Autumn School is "Sustainability and Cognitive Neuroscience – Time in Aesthetics / Aesthetics of Time", aiming to explore cutting-edge issues in human cognition from the perspectives of time and aesthetics. The Autumn School is jointly organized by leading universities and research institutions from Europe and China. It will feature internationally renowned scholars as instructors and mentors, many of whom are members of national and international scientific academies such as the European Academy of Sciences and Arts (EASA). Lectures will focus on the cognitive processing of aesthetics and time, cross-cultural understanding, and the intersection of art and science. 
 
@@ -22,7 +22,7 @@ miniCards_text: |
     The Autumn School provides not only a high-level academic training opportunity but also a valuable experience to broaden international perspectives and engage in face-to-face exchanges with world-renowned scholars. We invite students to actively participate and jointly explore the profound mysteries of the human mind in its complexity. 
     
     ### Organizers 
-    - Neurocognitive Image Lab (NIL), SISU
+    - Neurocognitive Image Laboratory (NIL), SISU
     - World Art History Institute (WAI), SISU
     - Federation of German Scientists (VDW) 
     - Institute of Medical Psychology (IMP), LMU

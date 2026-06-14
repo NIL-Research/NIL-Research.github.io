@@ -1,5 +1,5 @@
-{{- $brandTitle := "NIL | Neurocognitive Image Lab | 零点实验室" -}}
-{{- $brandDescription := "NIL (零点实验室), also known as the Neurocognitive Image Lab, Neurocognitive Image Laboratory, and 神经认知图像实验室, is affiliated with Shanghai International Studies University (上海外国语大学)." -}}
+{{- $brandTitle := "NIL | Neurocognitive Image Laboratory | 零点实验室" -}}
+{{- $brandDescription := "NIL (零点实验室), also known as the Neurocognitive Image Laboratory and 神经认知图像实验室, is affiliated with Shanghai International Studies University (上海外国语大学)." -}}
 {{- $pageTitle := .Title | default .Site.Title -}}
 {{- $title := cond .IsHome $brandTitle (printf "%s | NIL" $pageTitle) -}}
 {{- $description := or .Params.description .Params.news_summary .Params.summary .Params.subtitle .Summary $brandDescription -}}
@@ -13,10 +13,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $description }}">
-<meta name="keywords" content="NIL, 零点实验室, Neurocognitive Image Lab, Neurocognitive Image Laboratory, 神经认知图像实验室, Shanghai International Studies University, 上海外国语大学, neurocognitive image research, cognitive neuroscience, neuroaesthetics">
+<meta name="keywords" content="NIL, 零点实验室, Neurocognitive Image Laboratory, 神经认知图像实验室, Shanghai International Studies University, 上海外国语大学, neurocognitive image research, cognitive neuroscience, neuroaesthetics">
 <link rel="canonical" href="{{ $canonical }}">
 
-<meta property="og:site_name" content="NIL - Neurocognitive Image Lab">
+<meta property="og:site_name" content="NIL - Neurocognitive Image Laboratory">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">

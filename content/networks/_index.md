@@ -4,7 +4,7 @@ type: content
 
 BigCards_title: "Global Network"
 BigCards_text: | 
-    The Neurocognitive Image Lab (NIL) believes that groundbreaking science emerges at the intersection of disciplines and cultures.  We maintain active collaborations with research centers across Europe and Asia, spanning **cognitive neuroscience**, **philosophy of mind**, **metrology**, **artificial intelligence**, and **science ethics**.  
+    The Neurocognitive Image Laboratory (NIL) believes that groundbreaking science emerges at the intersection of disciplines and cultures.  We maintain active collaborations with research centers across Europe and Asia, spanning **cognitive neuroscience**, **philosophy of mind**, **metrology**, **artificial intelligence**, and **science ethics**.  
 
     These partnerships enable us to:
     - Conduct cross-cultural studies on perception and aesthetics  
@@ -55,7 +55,7 @@ sections:
     content:
       title: "Our Global Network"
       text: |
-        The **Neurocognitive Image Lab (NIL)** believes that groundbreaking science emerges at the intersection of disciplines and cultures.  
+        The **Neurocognitive Image Laboratory (NIL)** believes that groundbreaking science emerges at the intersection of disciplines and cultures.  
         We maintain active collaborations with research centers across Europe and Asia, spanning **cognitive neuroscience**, **philosophy of mind**, **metrology**, **artificial intelligence**, and **science ethics**.  
 
         These partnerships enable us to:

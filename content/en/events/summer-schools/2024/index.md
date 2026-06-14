@@ -1,12 +1,12 @@
 ---
-title: "NIL Summer School 2024: The Power of Aesthetics"
+title: "2024 Summer School: The Power of Aesthetics"
 type: events
 event_category: "summer-schools"
 event_data: "summer-schools/2024"
 show_in_news: false
 hero:
   label: "Past event"
-  title: "NIL Summer School 2024: The Power of Aesthetics"
+  title: "2024 Summer School: The Power of Aesthetics"
   summary: "The 2024 Summer School was held from August 24 to 31, 2024 at the Songjiang Campus of Shanghai International Studies University."
 ---
 
